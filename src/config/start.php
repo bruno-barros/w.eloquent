@@ -40,7 +40,7 @@ if (empty($loaded)) printf('<h1>%s</h1>', 'Unable to locate your environment fil
 /*----------------------------------------------------*/
 // Check required vars.
 /*----------------------------------------------------*/
-$check = $env->check(array('DB_NAME', 'DB_USER', 'DB_PASSWORD', 'DB_HOST','WP_HOME' ,	'WP_SITEURL', 'INSTALLATION_FOLDER'), $loaded);
+$check = $env->check(array('DB_NAME', 'DB_USER', 'DB_PASSWORD', 'DB_HOST', 'WP_HOME' , 'WP_SITEURL'), $loaded);
 
 /*----------------------------------------------------*/
 // Populate environment vars

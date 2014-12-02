@@ -4,7 +4,7 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
-	| Application Path
+	| Application Path. The base theme!
 	|--------------------------------------------------------------------------
 	|
 	| Here we just defined the path to the application directory. Most likely
@@ -12,9 +12,7 @@ return array(
 	| work perfectly fine for the vast majority of all our applications.
 	|
 	*/
-
 	'app' => __DIR__.'/../themes/base/app',
-//	'framework' => __DIR__.'/../framework',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -27,27 +25,27 @@ return array(
 	|
 	*/
 
-	'public' => __DIR__.'/../public',
+	'public' => __DIR__.'/../themes/base',
 
 	/*
 	|--------------------------------------------------------------------------
 	| Base Path
 	|--------------------------------------------------------------------------
 	|
-	| The base path is the root of the Laravel installation. Most likely you
+	| The base path is the root of the WP installation. Most likely you
 	| will not need to change this value. But, if for some wild reason it
 	| is necessary you will do so here, just proceed with some caution.
 	|
 	*/
 
-	'base' => __DIR__.'/..',
+	'base' => __DIR__.'/../..',
 
 	/*
 	|--------------------------------------------------------------------------
 	| Storage Path
 	|--------------------------------------------------------------------------
 	|
-	| The storage path is used by Laravel to store cached Blade views, logs
+	| The storage path is used by WP to store cached Blade views, logs
 	| and other pieces of information. You may modify the path here when
 	| you want to change the location of this directory for your apps.
 	|

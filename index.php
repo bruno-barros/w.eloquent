@@ -14,7 +14,8 @@ return array(
 	'DB_PASSWORD' => '',
 	'DB_HOST'     => 'localhost',
 	'DB_PREFIX'           => 'sig_',
-	'INSTALLATION_FOLDER'     => '/',
+	'WP_HOME'             => 'http://localhost/weloquent',
+	'WP_SITEURL'          => 'http://localhost/weloquent/cms',
 
 );
 */
