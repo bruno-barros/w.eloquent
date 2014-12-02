@@ -1,0 +1,30 @@
+### Miscellaneous
+.DS_Store
+Thumbs.db
+.htaccess
+
+### Composer
+composer.lock
+/vendor/
+
+### IDE
+.idea/
+
+### Wordpress
+/cms/*
+!/cms/.gitkeep
+/src/plugins
+/src/languages
+/src/uploads/*
+!/src/uploads/.gitkeep
+/src/themes/
+!/src/themes/base
+
+/src/storage/cache/*
+/src/storage/logs/*
+/src/storage/meta/*
+/src/storage/sessions/*
+/src/storage/views/*
+
+### Environment Credentials
+/.env.*.php

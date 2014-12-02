@@ -1,0 +1,41 @@
+{
+	"name": "Wordvel",
+	"description": "The best of Wordpress and Laravel.",
+	"keywords": ["Laravel", "framework", "WordPress"],
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Bruno Barros",
+			"email": "bruno@brunobarros.com",
+			"homepage": "http://www.brunobarros.com/"
+		}
+	],
+	"type": "project",
+	"autoload": {
+		"psr-4": {
+			"Framework\\": "src/framework",
+			"App\\": "src/themes/base/app"
+		}
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"require": {
+		"php": ">=5.4",
+		"johnpbloch/wordpress": ">=4.0",
+		"jgrossi/corcel": "dev-master",
+		"laravel/framework": "4.2.*"
+    },
+    "extra":{
+        "installer-paths":{
+            "src/plugins/themosis-{$name}/": ["themosis/framework"],
+			"src/plugins/{$name}/": ["type:wordpress-plugin"],
+            "src/themes/themosis-{$name}/": ["themosis/theme"],
+            "src/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "wordpress-install-dir": "cms"
+    },
+
+	"minimum-stability" : "stable",
+	"prefer-stable": true
+}
