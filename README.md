@@ -7,8 +7,9 @@ Wordpress integrated with Laravel via Composer. Together, but independents.
 ### Documentation soon.
 
 ### Goals
-Run `composer install` and have a system in place. With:
+Run `composer install` and have a system in place with:
 	- Wordpress as front and back-end
-	- Laravel as API and front-and if necessary
+	- Laravel as API and front-and (if necessary)
+	- Install Wordpress and plugins via composer
 	- Access to Laravel API, including Facades, inside Wordpress
 	- Access Wordpress API inside Laravel
