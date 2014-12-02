@@ -15,17 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function()
 {
-
-	$posts = \Corcel\Post::all();
-
-//	dd($posts->toArray());
-
 	return View::make('hello');
 });
 
 
 Route::get('api', function(){
 
-	return 'Um valor qualquer';
+	return 'Laravel API is running!';
 
 });
