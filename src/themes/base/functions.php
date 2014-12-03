@@ -3,12 +3,8 @@
  * Default
  */
 
-//$app['events']->listen('my', function(){
-//	dd('evented');
-//});
 
-//dd($app->make('app'));
-//\Illuminate\Support\Facades\Event::fire('my');
+
 
 add_action( 'brain_loaded', function() {
 
@@ -20,6 +16,8 @@ add_action( 'brain_loaded', function() {
 	->bindToMethod('Controller', 'index');
 
 });
+
+
 
 class Controller {
 

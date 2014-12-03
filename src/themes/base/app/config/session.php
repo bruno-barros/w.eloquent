@@ -44,7 +44,7 @@ return array(
 	|
 	*/
 
-	'files' => dirname(ABSPATH).'/src/themes/base/app/sessions',
+	'files' => dirname(SRC_PATH).'/src/storage/sessions',
 
 	/*
 	|--------------------------------------------------------------------------
