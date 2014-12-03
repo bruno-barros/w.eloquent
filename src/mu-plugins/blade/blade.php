@@ -49,6 +49,8 @@ define( 'WP_BLADE_CONFIG_PATH', WP_BLADE_APP_PATH . 'config/' );
 */
 define( 'WP_BLADE_LIBRARIES_PATH', WP_BLADE_APP_PATH . 'lib/' );
 
+
+
 /*
 |-------------------------------------------------------------------------
 | Start the plugin by instanciating the cain controller
@@ -60,5 +62,9 @@ define( 'WP_BLADE_LIBRARIES_PATH', WP_BLADE_APP_PATH . 'lib/' );
 | After that, instanciate the main controller which will add actions and the like.
 */
 
-require_once ( WP_BLADE_CONFIG_PATH . '/initialize.php' );
-WP_Blade_Main_Controller::make();
+
+if(! is_admin())
+{
+	require_once ( WP_BLADE_CONFIG_PATH . '/initialize.php' );
+	WP_Blade_Main_Controller::make();
+}
