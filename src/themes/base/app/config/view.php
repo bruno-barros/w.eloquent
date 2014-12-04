@@ -13,7 +13,10 @@ return array(
 	|
 	*/
 
-	'paths' => array(dirname(ABSPATH).'/src/themes/base/app/views'),
+	'paths' => array(
+		dirname(ABSPATH).'/src/themes/base',
+		dirname(ABSPATH).'/src/themes/base/app/views',
+	),
 
 	/*
 	|--------------------------------------------------------------------------

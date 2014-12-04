@@ -4,12 +4,10 @@
 use Illuminate\Container\Container;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\MessageBag;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Engines\PhpEngine;
 use Illuminate\View\Engines\CompilerEngine;
 use Illuminate\View\Engines\EngineResolver;
-use Illuminate\View\Compilers\BladeCompiler;
+//use Illuminate\View\Compilers\BladeCompiler;
 use Illuminate\View\FileViewFinder;
 use Illuminate\View\Factory;
 /**
@@ -192,4 +190,5 @@ class BladeAdapter{
 	{
 		return $this->container['blade.compiler'];
 	}
+
 }

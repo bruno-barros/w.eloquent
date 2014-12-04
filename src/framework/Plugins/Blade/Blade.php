@@ -13,13 +13,10 @@
 	 * Text Domain:       app-integration
 	 * Domain Path:       /languages
 	 */
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\View;
-use Illuminate\View\Compilers\BladeCompiler;
 
-//use Illuminate\View\Compilers\BladeCompiler as Blade;
+
+use Illuminate\Support\Facades\App;
+
 
 /**
  * Blade
@@ -47,8 +44,6 @@ class BladePlugin
 
 		$this->app = App::getFacadeApplication();
 		$this->paths = require SRC_PATH . '/config/paths.php';
-		// Instantiate main model
-		//		$this->main_model = new WP_Blade_Main_Model();
 
 		// Bind to template include action
 		add_action('template_include', array($this, 'parse'));
@@ -83,36 +78,26 @@ class BladePlugin
 	public function parse($template)
 	{
 
-//		dd($this->app['config']->get('view')['paths']);
-//		dd($paths['storage'].'/views');
-//		dd($this->app['path.storage'] . '/views');
-
 		$viewsFromConfig = $this->app['config']->get('view.paths');
 
 		$views = array_merge((array)$viewsFromConfig, (array)$this->paths['public']);
 		$cache = $this->paths['storage'].'/views';
 
-//		dd($views);
 
 		$blade = new BladeAdapter($views, $cache);
 
-		return (string)$blade->view()->make($this->prepareFileName($template));
-//		die;
 
-//		echo $blade->view()->make('hello');
+		if(! $blade->getCompiler()->isExpired($template))
+		{
+			return $blade->getCompiler()->getCompiledPath($template);
+		}
 
-	}
+		$blade->getCompiler()->compile($template);
 
-	private function prepareFileName($template = '')
-	{
-
-		$peaces = explode('/', $template);
-
-		$fileName = $peaces[count($peaces)-1];
-
-		return str_replace(array('.blade.php', '.php'), '', $fileName);
+		return $blade->getCompiler()->getCompiledPath($template);
 
 	}
+
 
 }
 

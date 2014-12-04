@@ -1,6 +1,15 @@
 @include('header')
 
 
+	<h1>Test blade</h1>
+
+	@if(true)
+	<p>show true</p>
+	@else
+	<p>show false</p>
+	@endif
+
+
 
 	@wpposts
 
@@ -16,7 +25,20 @@
 	@wpend
 
 
-	{{ View::make('master')->render() }}
+	<hr/>
+
+@debug([1,2,'bb'])
+
+<ul>
+	@wpquery(array('post_type' => 'post'))
+	<li><a href="{{the_permalink()}}">{{the_title()}}</a></li>
+	@wpempty
+	<li>{{ __('Sorry, no posts matched your criteria.') }}</li>
+	@wpend
+</ul>
+
+
+{{ View::make('master')->render() }}
 
 
 @include('footer')
