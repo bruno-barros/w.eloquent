@@ -1,0 +1,58 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * -------------------------------------------------------------------
+ * Tells WordPress to load the WordPress theme and output it.
+ * -------------------------------------------------------------------
+ *
+ * @var bool
+ */
+define('WP_USE_THEMES', false);
+require(dirname(__FILE__) . '/cms/wp-load.php');
+
+
+/**
+ * -------------------------------------------------------------------
+ * Start Laravel App
+ * -------------------------------------------------------------------
+ */
+
+require_once __DIR__ . '/src/framework/Plugins/LaravelApplication/laravel-app-init.php';
+# $app <-- available
+
+
+/**
+ * ----------------------------------------------------------------------
+ * Load The Artisan/Wel Console Application
+ * ----------------------------------------------------------------------
+ */
+$app->setRequestForConsoleEnvironment();
+
+//$artisan = Illuminate\Console\Application::start($app);
+$artisan = Framework\Core\Console\WelConsole::start($app);
+
+
+/**
+ * ----------------------------------------------------------------------
+ * Run The Artisan/Wel Application
+ * ----------------------------------------------------------------------
+ *
+ * When we run the console application, the current CLI command will be
+ * executed in this console and the response sent back to a terminal
+ * or another output device for the developers. Here goes nothing!
+ */
+$status = $artisan->run();
+
+
+/**
+ * ----------------------------------------------------------------------
+ * Shutdown The Application
+ * ----------------------------------------------------------------------
+ *Once Artisan has finished running. We will fire off the shutdown events
+ * so that any final work may be done by the application before we shut
+ * down the process. This is the last thing to happen to the request.
+ */
+$app->shutdown();
+
+exit($status);

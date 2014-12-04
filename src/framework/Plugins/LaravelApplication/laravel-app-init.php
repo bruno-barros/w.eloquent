@@ -24,6 +24,19 @@ if (!defined('WPINC'))
 
 /*
 |--------------------------------------------------------------------------
+| Setup Patchwork UTF-8 Handling
+|--------------------------------------------------------------------------
+|
+| The Patchwork library provides solid handling of UTF-8 strings as well
+| as provides replacements for all mb_* and iconv type functions that
+| are not available by default in PHP. We'll setup this stuff here.
+|
+*/
+
+Patchwork\Utf8\Bootup::initMbstring();
+
+/*
+|--------------------------------------------------------------------------
 | Create The Application
 |--------------------------------------------------------------------------
 |
@@ -103,7 +116,8 @@ Facade::setFacadeApplication($app);
 
 $aliases = array(
 	'app'            => 'Illuminate\Foundation\Application',
-	'artisan'        => 'Illuminate\Console\Application',
+//	'artisan'        => 'Illuminate\Console\Application',
+	'artisan'        => 'Framework\Core\Console\WelConsole',
 	'auth'           => 'Illuminate\Auth\AuthManager',
 	'auth.reminder.repository' => 'Illuminate\Auth\Reminders\ReminderRepositoryInterface',
 //	'blade.compiler' => 'Illuminate\View\Compilers\BladeCompiler',

@@ -29,11 +29,13 @@ return [
 
 	'providers' => array(
 
-		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
+//		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
+		'Framework\Providers\WelServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
-		'Illuminate\Session\CommandsServiceProvider',
-		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
+//		'Illuminate\Session\CommandsServiceProvider',
+//		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
+		'Framework\Providers\ConsoleSupportServiceProvider',
 		'Illuminate\Routing\ControllerServiceProvider',
 		'Illuminate\Cookie\CookieServiceProvider',
 		'Illuminate\Database\DatabaseServiceProvider',
