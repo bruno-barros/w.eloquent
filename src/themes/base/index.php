@@ -15,6 +15,7 @@
 
 	<h2><a href="{{ the_permalink() }}">{{the_title()}}</a></h2>
 
+
 	{{ the_content() }}
 
 
@@ -24,10 +25,10 @@
 
 	@wpend
 
+	@{{ não paeseia }}
 
 	<hr/>
 
-@debug([1,2,'bb'])
 
 <ul>
 	@wpquery(array('post_type' => 'post'))

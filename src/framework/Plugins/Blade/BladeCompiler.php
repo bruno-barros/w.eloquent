@@ -62,15 +62,26 @@ class BladeCompiler extends \Illuminate\View\Compilers\BladeCompiler
 	}
 
 	/**
+	 * die;
+	 *
+	 * @param $expression
+	 * @return string
+	 */
+	protected function compileDie($expression)
+	{
+		return "<?php die{$expression} ?>";
+
+	}
+
+	/**
 	 * var_dump(); die;
 	 *
 	 * @param $expression
+	 * @return string
 	 */
-	protected function compileDebug($expression)
+	protected function compileDd($expression)
 	{
-		$expression = substr($expression, 1, -1);
-//		var_dump($expression);
-		die($expression);
+		return "<?php dd{$expression} ?>";
 	}
 
 
