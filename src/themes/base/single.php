@@ -1,21 +1,19 @@
-@include('header')
+@extends('master')
 
-	<a href="{{ get_home_url() }}">Home</a>
+@section('main')
 
-
-	@wpposts
+	@loop
 
 		<h1>{{the_title()}}</h1>
 
 		{{ the_content() }}
 
 
-	@wpempty
+	@emptyloop
 
 		<p>404</p>
 
-	@wpend
+	@endloop
 
 
-
-@include('footer')
+@stop

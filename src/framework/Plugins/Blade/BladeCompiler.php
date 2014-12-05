@@ -7,12 +7,14 @@ class BladeCompiler extends \Illuminate\View\Compilers\BladeCompiler
 
 
 	/**
+	 * @loop
+	 *
 	 * have_posts()
 	 *
 	 * @param $value
 	 * @return string
 	 */
-	protected function compileWpposts($value)
+	protected function compileLoop($value)
 	{
 
 		return '<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>';
@@ -20,39 +22,44 @@ class BladeCompiler extends \Illuminate\View\Compilers\BladeCompiler
 	}
 
 	/**
+	 * @emptyloop
+	 *
 	 * have_posts() else:
 	 *
 	 * @param $value
 	 * @return string
 	 */
-	protected static function compileWpempty($value)
+	protected static function compileEmptyloop($value)
 	{
 
 		return '<?php endwhile; ?><?php else: ?>';
 	}
 
 	/**
+	 * @endloop
+	 *
 	 * have_posts() end;
 	 *
 	 * @param $value
 	 * @return string
 	 */
-	protected static function compileWpend($value)
+	protected static function compileEndloop($value)
 	{
 
 		return '<?php endif; wp_reset_postdata(); ?>';
 	}
 
 	/**
+	 * @query(array)
+	 *
 	 * new WP_Query
 	 *
 	 * @param $expression
 	 * @return mixed
 	 */
-	protected function compileWpquery($expression)
+	protected function compileQuery($expression)
 	{
 
-		//		$pattern = '/(\s*)@wpquery(\s*\(.*\))/';
 		$replacement = "<?php \$bladequery = new WP_Query{$expression}; ";
 		$replacement .= "if ( \$bladequery->have_posts() ) : ";
 		$replacement .= "while ( \$bladequery->have_posts() ) : ";
@@ -62,7 +69,27 @@ class BladeCompiler extends \Illuminate\View\Compilers\BladeCompiler
 	}
 
 	/**
-	 * die;
+	 * @emptyquery
+	 *
+	 * @return string
+	 */
+	protected function compileEmptyquery()
+	{
+		return '<?php endwhile; else: ?>';
+	}
+
+	/**
+	 * @endquery
+	 *
+	 * @return string
+	 */
+	protected function compileEndquery()
+	{
+		return '<?php endif; wp_reset_postdata(); ?>';
+	}
+
+	/**
+	 * @die($exp);
 	 *
 	 * @param $expression
 	 * @return string
@@ -74,6 +101,8 @@ class BladeCompiler extends \Illuminate\View\Compilers\BladeCompiler
 	}
 
 	/**
+	 * @dd($exp)
+	 *
 	 * var_dump(); die;
 	 *
 	 * @param $expression

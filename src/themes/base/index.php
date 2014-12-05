@@ -1,45 +1,48 @@
-@include('header')
+@extends('master')
 
+@section('main')
 
 	<h1>Test blade</h1>
 
-	@if(true)
-	<p>show true</p>
-	@else
-	<p>show false</p>
-	@endif
+	@loop
 
-
-
-	@wpposts
-
-	<h2><a href="{{ the_permalink() }}">{{the_title()}}</a></h2>
-
+		<h2><a href="{{ the_permalink() }}">{{the_title()}}</a></h2>
 
 	{{ the_content() }}
 
+	@emptyloop
 
-	@wpempty
+		<p>404</p>
 
-	<p>404</p>
+	@endloop
 
-	@wpend
 
-	@{{ não paeseia }}
 
 	<hr/>
 
 
 <ul>
-	@wpquery(array('post_type' => 'post'))
+	@query(array('post_type' => 'post'))
+
 	<li><a href="{{the_permalink()}}">{{the_title()}}</a></li>
-	@wpempty
+
+	@emptyquery
+
 	<li>{{ __('Sorry, no posts matched your criteria.') }}</li>
-	@wpend
+
+	@endquery
 </ul>
 
 
-{{ View::make('master')->render() }}
+@stop
 
+@section('sidebar')
 
-@include('footer')
+	<h3>My page sidebar</h3>
+	<ul>
+		<li><a href="#">some link</a></li>
+	</ul>
+
+	@parent
+
+@stop
