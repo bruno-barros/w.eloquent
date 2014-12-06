@@ -13,5 +13,6 @@ Run `composer install` and have a system in place with:
 	- Wordpress as front and back-end
 	- Laravel as API and front-and (if necessary)
 	- Install Wordpress and plugins via composer
+	- Keeping plugins and themes for Wordpress environment as it is 
 	- Access to Laravel API, including Facades, inside Wordpress
 	- Access Wordpress API inside Laravel
