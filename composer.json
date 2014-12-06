@@ -12,13 +12,17 @@
 	],
 	"type": "project",
 	"autoload": {
+		"files": [
+			"src/framework/Support/helpers.php"
+		],
 		"psr-4": {
 			"Framework\\": "src/framework",
 			"App\\": "src/themes/base/app"
 		}
 	},
 	"config": {
-		"preferred-install": "dist"
+		"preferred-install": "dist",
+		"optimize-autoloader": true
 	},
 	"require": {
 		"php": ">=5.4",
@@ -36,6 +40,6 @@
         "wordpress-install-dir": "cms"
     },
 
-	"minimum-stability" : "stable",
+	"minimum-stability" : "dev",
 	"prefer-stable": true
 }

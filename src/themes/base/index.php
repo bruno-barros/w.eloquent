@@ -1,8 +1,10 @@
 @extends('layouts.home')
 
+
 @section('main')
 
 	<h1>Test blade</h1>
+
 
 	@loop
 

@@ -16,5 +16,7 @@ if ( ! defined( 'CORTEXBASEPATH' ) ) define( 'CORTEXBASEPATH', plugin_dir_path( 
 if ( ! class_exists( 'Brain\Container' ) && is_file( CORTEXBASEPATH . 'vendor/autoload.php' ) ) {
 	require_once CORTEXBASEPATH . 'vendor/autoload.php';
 }
-
+// routes
 Brain\Cortex::boot();
+// assets
+Brain\Occipital::boot();

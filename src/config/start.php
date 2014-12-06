@@ -17,9 +17,6 @@ if (file_exists($autoload = $root_path.DS.'vendor'.DS.'autoload.php'))
 	require_once($autoload);
 }
 
-
-
-
 /*----------------------------------------------------*/
 // Set environment
 /*----------------------------------------------------*/

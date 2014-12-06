@@ -19,6 +19,7 @@
         "brain/support": "dev-master",
         "brain/amygdala": "dev-master",
         "brain/striatum": "dev-master",
+	    "brain/occipital": "dev-master",
         "symfony/routing": "2.*",
         "brain/cortex": "dev-master",
         "composer/installers": "~1.0"
