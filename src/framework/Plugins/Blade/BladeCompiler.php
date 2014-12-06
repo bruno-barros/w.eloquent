@@ -1,10 +1,35 @@
 <?php namespace Framework\Plugins\Blade;
 
 use Closure;
+use Symfony\Component\Security\Core\Exception\InvalidArgumentException;
 
 class BladeCompiler extends \Illuminate\View\Compilers\BladeCompiler
 {
 
+
+	/**
+	 * @var(var = value)
+	 *
+	 * @param $expression
+	 * @return string
+	 */
+	protected function compileVar($expression)
+	{
+		// expected => ('varName', View::shared('someVar'))
+
+		$args  = substr($expression, 1, -1);
+		$args2 = explode('=', $args);
+
+		if(count($args2) !== 2)
+		{
+			throw new InvalidArgumentException("The @def statemant is out of pattern: @def(var = \$someValue)");
+		}
+
+		$var  = str_replace(array('\'', ' '), '', $args2[0]);
+		$data = trim($args2[1]);
+
+		return "<?php \${$var} = {$data};?>";
+	}
 
 	/**
 	 * @loop

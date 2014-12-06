@@ -13,6 +13,19 @@ class BaseController extends Controller{
 
 
 	/**
+	 * Share data
+	 *
+	 * @param string|array $key
+	 * @param null|mixed $value
+	 * @return void
+	 */
+	protected function share($key, $value = null)
+	{
+		View::share($key, $value);
+	}
+
+
+	/**
 	 * Setup the layout used by the controller.
 	 *
 	 * @return void

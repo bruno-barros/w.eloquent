@@ -1,5 +1,7 @@
 <?php namespace App\Controllers;
 
+use Corcel\Post;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\View;
 
 /**
@@ -10,16 +12,26 @@ use Illuminate\Support\Facades\View;
  */
 class HomeController extends BaseController{
 
-	public $var = '123';
 
-	public function getIndex($id = '')
+	public function getIndex($name = '')
 	{
-		$var = 'bruno';
+		/**
+		 * Do whatever you need
+		 */
+		$model = new Post();
+		$post = $model->where('post_name', $name)->first();
 
-		return  View::make('master', compact('var'));
-//
-//		$view = View::make('master', compact('var'));
-//		echo (string)$view;
+		/**
+		 * Share data with views and subviews
+		 */
+		$this->share('myPost', $post);
+
+	}
+
+
+	public function postIndex()
+	{
+		dd(Input::all());
 	}
 
 } 

@@ -58,6 +58,12 @@ return [
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		/**
+		 * Corcel Eloquent Models for Wordpress
+		 * @link https://github.com/jgrossi/corcel
+		 */
+		'Framework\Providers\EloquentBootstrapServiceProvider'
+
 	),
 
 	'aliases' => array(

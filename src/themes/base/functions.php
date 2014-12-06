@@ -5,7 +5,6 @@
 
 
 
-
 add_action( 'brain_loaded', function() {
 
 	Brain\Routes::add( '/route/{name}/{page}', 'some_route', 1, array(

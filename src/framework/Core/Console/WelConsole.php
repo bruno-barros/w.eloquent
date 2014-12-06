@@ -11,19 +11,17 @@ use Illuminate\Console\Application;
 class WelConsole extends Application{
 
 
-	const VERSION = '1.0.0';
-
 	/**
 	 * Create a new Console application.
 	 *
-	 * @param  \Illuminate\Foundation\Application  $app
+	 * @param  \Framework\Core\Application $app
 	 * @return \Illuminate\Console\Application
 	 */
 	public static function make($app)
 	{
 		$app->boot();
 
-		$console = with($console = new static('WEL. A w.eloquent console by artisan.', self::VERSION))
+		$console = with($console = new static('WEL. A w.eloquent console by artisan.', $app::VERSION))
 			->setLaravel($app)
 			->setExceptionHandler($app['exception'])
 			->setAutoExit(false);

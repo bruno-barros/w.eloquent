@@ -30,7 +30,7 @@ require_once __DIR__ . '/src/framework/Plugins/LaravelApplication/laravel-app-in
 $app->setRequestForConsoleEnvironment();
 
 //$artisan = Illuminate\Console\Application::start($app);
-$artisan = Framework\Core\Console\WelConsole::start($app);
+$wel = Framework\Core\Console\WelConsole::start($app);
 
 
 /**
@@ -42,7 +42,7 @@ $artisan = Framework\Core\Console\WelConsole::start($app);
  * executed in this console and the response sent back to a terminal
  * or another output device for the developers. Here goes nothing!
  */
-$status = $artisan->run();
+$status = $wel->run();
 
 
 /**

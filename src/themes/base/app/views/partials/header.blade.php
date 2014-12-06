@@ -18,9 +18,9 @@
 			<div class="col-xs-12">
 
 				<ul class="list-unstyled">
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
+					<li><a href="#">link</a></li>
+					<li><a href="#">link</a></li>
+					<li><a href="#">link</a></li>
 				</ul>
 
 			</div>

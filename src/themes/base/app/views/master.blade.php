@@ -3,42 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Default</title>
+	<title><?php wp_title() ?></title>
 
 	@include('partials.head')
+
+	@yield('head')
 
 </head>
 
 <body <?php body_class()?>>
 
-	@include('partials.header')
+@yield('top')
 
-	<div class="container">
+@yield('middle')
 
-		<div class="row">
-
-			<div class="col-sm-8">
-
-				@yield('main')
-
-			</div>
-
-			<div class="col-sm-4">
-
-				@section('sidebar')
-
-					<h3>My default sidebar</h3>
-
-				@show
-
-			</div>
-
-		</div>
-
-	</div>
-
-
-	@include('partials.footer')
+@yield('bottom')
 
 </body>
 

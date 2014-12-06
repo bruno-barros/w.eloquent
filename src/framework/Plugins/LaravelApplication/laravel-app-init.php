@@ -46,7 +46,7 @@ Patchwork\Utf8\Bootup::initMbstring();
 |
 */
 
-$app = new \Illuminate\Foundation\Application;
+$app = new \Framework\Core\Application;
 
 /*
 |--------------------------------------------------------------------------
@@ -115,7 +115,7 @@ Facade::setFacadeApplication($app);
 */
 
 $aliases = array(
-	'app'            => 'Illuminate\Foundation\Application',
+	'app'            => 'Framework\Core\Application',
 //	'artisan'        => 'Illuminate\Console\Application',
 	'artisan'        => 'Framework\Core\Console\WelConsole',
 	'auth'           => 'Illuminate\Auth\AuthManager',
@@ -273,7 +273,6 @@ $app->booted(function() use ($app, $env)
 });
 
 $routes = $app['path'].'/config/routes.php';
-//dd(file_exists($routes));
 if (file_exists($routes)) require $routes;
 
 /*
@@ -291,8 +290,12 @@ try{
 	$request = \Illuminate\Http\Request::createFromGlobals();
 	$response = $app['router']->dispatch($request);
 	$response->send();
+
+//	$app->run();
+
 } catch (\Exception $e)
 {
-	// fail silently
+	/**
+	 * Otherwise use default Wordpress templates
+	 */
 }
-//$app->run();
