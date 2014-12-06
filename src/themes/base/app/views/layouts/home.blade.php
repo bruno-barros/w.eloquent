@@ -2,7 +2,7 @@
 <?php
 // Layout define a page structure
 ?>
-@section('middle')
+@section('body_middle')
 
  	@include('partials.header')
 

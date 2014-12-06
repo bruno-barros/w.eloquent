@@ -13,8 +13,10 @@
  */
 use Brain\Container;
 use Brain\Cortex;
+use Framework\Core\Application;
 use Framework\Plugins\AppIntegration\Admin\AppIntegrationAdmin;
 use Framework\Plugins\AppIntegration\Front\AppIntegrationPublic;
+use Illuminate\Support\Facades\App;
 
 /**
  * The core plugin class.
@@ -61,6 +63,10 @@ class AppIntegration
 	 * @var      string $version The current version of the plugin.
 	 */
 	protected $version;
+	/**
+	 * @var Application
+	 */
+	private $app;
 
 	/**
 	 * Define the core functionality of the plugin.
@@ -70,18 +76,27 @@ class AppIntegration
 	 * the public-facing side of the site.
 	 *
 	 * @since    1.0.0
+	 * @param Application $app
 	 */
-	public function __construct()
+	public function __construct(Application $app)
 	{
 		$this->plugin_name = 'app-integration';
 		$this->version     = '1.0.0';
+		$this->app = $app;
 
-		$this->load_dependencies();
-		$this->set_locale();
-		$this->define_admin_hooks();
-		$this->define_public_hooks();
+		$this->loadDependencies();
+		$this->setLocale();
 
-		$this->bootstrapApp();
+		if (is_admin())
+		{
+			$this->defineAdminHooks();
+		}
+	else
+		{
+			$this->definePublicHooks();
+		}
+
+		ConfigurationsAutoLoader::setApp($this->app)->add();
 
 	}
 
@@ -89,16 +104,10 @@ class AppIntegration
 	{
 		if (!self::$instance)
 		{
-			self::$instance = new static;
+			self::$instance = new static(App::getFacadeApplication());
 		}
 
 		return self::$instance;
-	}
-
-	public function bootstrapApp()
-	{
-
-
 	}
 
 	/**
@@ -117,7 +126,7 @@ class AppIntegration
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function load_dependencies()
+	private function loadDependencies()
 	{
 		$this->loader = new AppIntegrationLoader();
 	}
@@ -131,7 +140,7 @@ class AppIntegration
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function set_locale()
+	private function setLocale()
 	{
 
 		$plugin_i18n = new AppIntegrationI18n();
@@ -148,7 +157,7 @@ class AppIntegration
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function define_admin_hooks()
+	private function defineAdminHooks()
 	{
 
 		$plugin_admin = new AppIntegrationAdmin($this->get_plugin_name(), $this->get_version());
@@ -165,13 +174,13 @@ class AppIntegration
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function define_public_hooks()
+	private function definePublicHooks()
 	{
 
 		$plugin_public = new AppIntegrationPublic($this->get_plugin_name(), $this->get_version());
 
-//		$this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
-//		$this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
+		//		$this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
+		//		$this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
 
 	}
 

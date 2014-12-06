@@ -2,7 +2,6 @@
 
 use Corcel\Post;
 use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\View;
 
 /**
  * HomeController

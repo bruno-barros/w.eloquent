@@ -23,7 +23,7 @@ class ExampleCommand extends Command {
 	/**
 	 * Create a new command instance.
 	 *
-	 * @return void
+	 * @return \App\Commands\ExampleCommand
 	 */
 	public function __construct()
 	{
@@ -37,7 +37,7 @@ class ExampleCommand extends Command {
 	 */
 	public function fire()
 	{
-		$this->line("Do some example stuff.");
+		$this->line("Do some stuff here!!!");
 	}
 
 	/**

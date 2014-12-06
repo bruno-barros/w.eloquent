@@ -13,11 +13,11 @@
 
 <body <?php body_class()?>>
 
-@yield('top')
+@yield('body_top')
 
-@yield('middle')
+@yield('body_middle')
 
-@yield('bottom')
+@yield('body_bottom')
 
 </body>
 

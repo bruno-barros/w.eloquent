@@ -24,6 +24,7 @@
 
 // If this file is called directly, abort.
 use Framework\Plugins\AppIntegration\Includes\AppIntegration;
+use Illuminate\Support\Facades\App;
 
 if (!defined('WPINC'))
 {
@@ -45,7 +46,7 @@ function run_app_integration()
 	 * The core plugin class that is used to define internationalization,
 	 * dashboard-specific hooks, and public-facing site hooks.
 	 */
-	$plugin = new AppIntegration();
+	$plugin = new AppIntegration(App::getFacadeApplication());
 	$plugin->run();
 
 }
