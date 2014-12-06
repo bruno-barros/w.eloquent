@@ -1,5 +1,6 @@
 w.eloquent
 ------------------
+![w.eoquent](https://github.com/bruno-barros/w.eloquent/blob/master/src/themes/base/screenshot.png)
 
 Wordpress integrated with Laravel via Composer. Together, but independents.
 
