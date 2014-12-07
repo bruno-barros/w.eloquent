@@ -30,12 +30,10 @@ return [
 	'providers' => array(
 
 //		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
-		'Framework\Providers\WelServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
 //		'Illuminate\Session\CommandsServiceProvider',
 //		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
-		'Framework\Providers\ConsoleSupportServiceProvider',
 		'Illuminate\Routing\ControllerServiceProvider',
 		'Illuminate\Cookie\CookieServiceProvider',
 		'Illuminate\Database\DatabaseServiceProvider',
@@ -57,6 +55,10 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+
+		'Framework\Providers\WelServiceProvider',
+		'Framework\Providers\ConsoleSupportServiceProvider',
+		'Framework\Providers\NavigationServiceProvider',
 
 		/**
 		 * Corcel Eloquent Models for Wordpress
@@ -106,6 +108,8 @@ return [
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
+
+		'Menu'              => 'Framework\Facades\Menu',
 	),
 
 ];

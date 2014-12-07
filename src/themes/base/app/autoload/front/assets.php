@@ -99,15 +99,6 @@ add_action('brain_loaded', function ()
 	 * ----------------------------------------------
 	 * Scripts
 	 */
-//	\Brain\Assets::addFrontScript('jquery')
-//		->src($jsUrl . '/jquery-1.11.1.min.js')
-//		->provide(['jquery'])
-//		->ver($ver)
-//		->condition(function (WP_Query $query, $user)
-//		{
-//			return (getenv('APP_ENV') === 'local') ? true : false;
-//		});
-
 	\Brain\Assets::addFrontScript('bootstrap-script-front')
 		->src($jsUrl . '/bootstrap.min.js')
 		->deps([ 'jquery' ])
