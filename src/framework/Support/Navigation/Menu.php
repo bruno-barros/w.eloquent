@@ -1,6 +1,7 @@
 <?php  namespace Framework\Support\Navigation;
 
 use Framework\Core\Application;
+use Framework\Support\Navigation\Contracts\MenuInterface;
 use Symfony\Component\Translation\Exception\NotFoundResourceException;
 
 /**
@@ -9,7 +10,7 @@ use Symfony\Component\Translation\Exception\NotFoundResourceException;
  * @author Bruno Barros  <bruno@brunobarros.com>
  * @copyright    Copyright (c) 2014 Bruno Barros
  */
-class Menu
+class Menu implements MenuInterface
 {
 
 
@@ -18,8 +19,16 @@ class Menu
 	 */
 	private $app;
 
+	/**
+	 * Registered menus
+	 * @var array
+	 */
 	private $menusRegistered = [];
 
+	/**
+	 * Defaults configuration
+	 * @var array
+	 */
 	private $defaults = array(
 		'theme_location'  => '',
 		'menu'            => 'menu',
