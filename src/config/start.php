@@ -6,9 +6,6 @@ define('SRC_PATH', dirname(__DIR__));
 
 $root_path = str_replace('\src', '', SRC_PATH);
 
-$webroot_path = $root_path;
-
-
 /*----------------------------------------------------*/
 // Include composer autoloading
 /*----------------------------------------------------*/
@@ -63,7 +60,7 @@ if (file_exists($config = $root_path.DS.'src/config'.DS.'environments'.DS.$locat
 // Content directory
 /*----------------------------------------------------*/
 define('CONTENT_DIR', 'src');
-define('WP_CONTENT_DIR', $webroot_path.DS.CONTENT_DIR);
+define('WP_CONTENT_DIR', $root_path.DS.CONTENT_DIR);
 define('WP_CONTENT_URL', WP_HOME.'/'.CONTENT_DIR);
 
 /*----------------------------------------------------*/
@@ -79,7 +76,7 @@ if (file_exists($shared = $root_path.DS.'src/config'.DS.'shared.php'))
 /*----------------------------------------------------*/
 if (!defined('ABSPATH'))
 {
-	define('ABSPATH', $webroot_path.DS.'cms'.DS);
+	define('ABSPATH', $root_path.DS.'cms'.DS);
 }
 
 

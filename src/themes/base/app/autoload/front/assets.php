@@ -16,7 +16,9 @@ add_action('brain_loaded', function ()
 	$cssUrl = Config::get('assets.css.url');
 
 	\Brain\Assets::addFrontStyle('layout-front')
+
 		->src( $cssUrl . '/layout.css')
+
 		->ver(1);
 
 	//	Brain\Assets::addStyle( 'my-style' )

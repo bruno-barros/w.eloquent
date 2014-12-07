@@ -1,32 +1,31 @@
-
 <header id="header">
 
-	<div class="container">
 
-		<div class="row">
-
-			<div class="col-xs-12">
-
-				<div class="jumbotron">
-					<h1><a href="{{ get_home_url() }}" class="brand">w.eloquent</a></h1>
-				</div>
+	<h1><a href="{{ get_home_url() }}" class="brand">w.eloquent</a></h1>
 
 
+	<?php
 
-			</div>
+	wp_nav_menu( array(
+        'theme_location'  => 'primary',
+        'menu'            => 'primary',
+        'container'       => 'div',
+        'container_class' => 'main-menu',
+        'container_id'    => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+        'depth'           => 0,
+        'walker'          => ''
+    ) );
 
-			<div class="col-xs-12">
+	?>
 
-				<ul class="list-unstyled">
-					<li><a href="#">link</a></li>
-					<li><a href="#">link</a></li>
-					<li><a href="#">link</a></li>
-				</ul>
-
-			</div>
-
-		</div>
-
-	</div>
 
 </header>

@@ -26,14 +26,23 @@
 	},
 	"require": {
 		"php": ">=5.4",
+		"composer/installers": "~1.0",
 		"johnpbloch/wordpress": ">=4.0",
 		"jgrossi/corcel": "dev-master",
-		"laravel/framework": "4.2.*"
-    },
+		"laravel/framework": "4.2.*",
+		"brain/brain": "dev-master",
+		"brain/support": "dev-master",
+		"brain/amygdala": "dev-master",
+		"brain/striatum": "dev-master",
+		"brain/occipital": "dev-master",
+		"brain/cortex": "dev-master",
+		"symfony/routing": "2.*"
+	},
     "extra":{
         "installer-paths":{
             "src/plugins/themosis-{$name}/": ["themosis/framework"],
 			"src/plugins/{$name}/": ["type:wordpress-plugin"],
+			"src/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
             "src/themes/themosis-{$name}/": ["themosis/theme"],
             "src/themes/{$name}/": ["type:wordpress-theme"]
         },
