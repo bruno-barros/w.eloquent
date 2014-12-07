@@ -28,7 +28,7 @@ composer.lock
 /src/storage/sessions/*
 /src/storage/views/*
 
-# Assets
+# Compiled Assets
 _global.css
 _global.min.css
 _global.js
