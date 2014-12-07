@@ -4,8 +4,8 @@ w.eloquent
 
 Wordpress integrated with Laravel via Composer. Together, but independents.
 
-## Still in development.
-### Documentation soon.
+## Still in development, but works.
+Documentation is being building on [wiki page](https://github.com/bruno-barros/w.eloquent/wiki).
 
 ### Goals
 Run `composer install` and have a system in place with:
