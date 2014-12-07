@@ -2,6 +2,7 @@
 .DS_Store
 Thumbs.db
 .htaccess
+node_modules
 
 ### Composer
 composer.lock
@@ -26,6 +27,12 @@ composer.lock
 /src/storage/meta/*
 /src/storage/sessions/*
 /src/storage/views/*
+
+# Assets
+_global.css
+_global.min.css
+_global.js
+_global.min.js
 
 ### Environment Credentials
 /.env.*.php

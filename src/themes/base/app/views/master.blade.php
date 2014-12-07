@@ -7,6 +7,8 @@
 
 	@include('partials.head')
 
+	<?php wp_head()?>
+
 	@yield('head')
 
 </head>
