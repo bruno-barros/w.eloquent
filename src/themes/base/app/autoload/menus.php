@@ -5,6 +5,14 @@
  * ---------------------------------------------------
  */
 
+/**
+ * On template use:
+ * <code>
+ * {{ Menu::render('primary') }}
+ * // or
+ * <?php echo Menu::render('primary')?>
+ * </code>
+ */
 Menu::add('primary', 'Primary menu',
 	array(
 		'theme_location'  => 'primary',
@@ -14,7 +22,7 @@ Menu::add('primary', 'Primary menu',
 		'container_id'    => '',
 		'menu_class'      => 'nav nav-pills nav-stacked',
 		'menu_id'         => '',
-		'echo'            => false,
+		'echo'            => false, // <== always false
 		'fallback_cb'     => 'wp_page_menu',
 		'before'          => '',
 		'after'           => '',
@@ -25,15 +33,8 @@ Menu::add('primary', 'Primary menu',
 		'walker'          => new \Framework\Support\Navigation\BootstrapMenuWalker
 	));
 
-//add_action('init', function ()
-//{
-//
-//	register_nav_menus(array(
-//
-//		'primary' => 'Primary menu',
-//
-//		'footer'  => 'Footer menu',
-//
-//	));
-//
-//});
+
+/*
+ * Default configurations
+ */
+Menu::add('footer', 'Footer menu');
