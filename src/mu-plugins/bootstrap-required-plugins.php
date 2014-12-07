@@ -2,7 +2,7 @@
 /**
  * Load required plugins
  */
-if(! file_exists(SRC_PATH . '/themes/base/app/config/plugins.php'))
+if(! file_exists(SRC_PATH . '/themes/'.APP_THEME.'/app/config/plugins.php'))
 {
 	throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException("app/config/plugins.php is needed!");
 }
@@ -21,7 +21,7 @@ $defaults = [
 	SRC_PATH . '/framework/Plugins/AppIntegration/app-integration.php',
 ];
 
-$muPlugins = require_once SRC_PATH . '/themes/base/app/config/plugins.php';
+$muPlugins = require_once SRC_PATH . '/themes/'.APP_THEME.'/app/config/plugins.php';
 
 foreach(array_merge($defaults, $muPlugins) as $path)
 {

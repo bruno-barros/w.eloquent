@@ -1,5 +1,5 @@
 {
-	"name": "w.eloquent",
+	"name": "bruno-barros/w.eloquent",
 	"description": "Wordpress integrated with Laravel via Composer. Together, but independents.",
 	"keywords": ["Laravel", "framework", "WordPress"],
 	"license": "GPL-2.0+",

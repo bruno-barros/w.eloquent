@@ -12,7 +12,7 @@ return array(
 	| work perfectly fine for the vast majority of all our applications.
 	|
 	*/
-	'app' => __DIR__.'/../themes/base/app',
+	'app' => __DIR__.'/../themes/'.APP_THEME.'/app',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -25,7 +25,7 @@ return array(
 	|
 	*/
 
-	'public' => __DIR__.'/../themes/base',
+	'public' => __DIR__.'/../themes/'.APP_THEME,
 
 	/*
 	|--------------------------------------------------------------------------

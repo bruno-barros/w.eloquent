@@ -11,7 +11,6 @@
  * @package    AppIntegration
  * @subpackage AppIntegration/includes
  */
-use Brain\Container;
 use Brain\Cortex;
 use Framework\Core\Application;
 use Framework\Plugins\AppIntegration\Admin\AppIntegrationAdmin;
@@ -80,7 +79,7 @@ class AppIntegration
 	 */
 	public function __construct(Application $app)
 	{
-		$this->plugin_name = 'app-integration';
+		$this->plugin_name = 'weloquent';
 		$this->version     = '1.0.0';
 		$this->app = $app;
 

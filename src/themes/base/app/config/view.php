@@ -14,8 +14,8 @@ return array(
 	*/
 
 	'paths' => array(
-		dirname(ABSPATH).'/src/themes/base',
-		dirname(ABSPATH).'/src/themes/base/app/views',
+		dirname(ABSPATH).'/src/themes/'.APP_THEME,
+		dirname(ABSPATH).'/src/themes/'.APP_THEME.'/app/views',
 	),
 
 	/*

@@ -9,13 +9,15 @@ return array(
 
 	'APP_ENV'     => 'local',
 
+	'APP_THEME'   => 'base',
+
 	'DB_NAME'     => '',
 	'DB_USER'     => '',
 	'DB_PASSWORD' => '',
 	'DB_HOST'     => 'localhost',
-	'DB_PREFIX'           => 'sig_',
-	'WP_HOME'             => 'http://localhost/weloquent',
-	'WP_SITEURL'          => 'http://localhost/weloquent/cms',
+	'DB_PREFIX'   => 'sig_',
+	'WP_HOME'     => 'http://localhost/weloquent',
+	'WP_SITEURL'  => 'http://localhost/weloquent/cms',
 
 );
 */

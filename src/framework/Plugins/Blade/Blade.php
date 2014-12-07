@@ -72,10 +72,6 @@ class BladePlugin
 		return new self();
 	}
 
-	public function redirect($template)
-	{
-		dd($template);
-	}
 
 	/**
 	 * Handle the compilation of the templates
@@ -92,9 +88,6 @@ class BladePlugin
 
 		$blade = new BladeAdapter($views, $cache);
 
-//		$template = $this->checkTemplateFile($template);
-
-
 		if (!$blade->getCompiler()->isExpired($template))
 		{
 			return $blade->getCompiler()->getCompiledPath($template);
@@ -106,22 +99,7 @@ class BladePlugin
 
 	}
 
-	private function checkTemplateFile($template)
-	{
-		$blade = substr($template, 0, -3).'blade.php';
-		$blade = str_replace('themes/base', 'themes/base/app/views', $blade);
-//dd($blade);
-		if(file_exists($blade))
-		{
-			$file = $blade;
-		}
-		else
-		{
-			$file = $template;
-		}
-//dd($file);
-		return $file;
-	}
+
 
 }
 
