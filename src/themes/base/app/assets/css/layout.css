@@ -3,12 +3,13 @@ body{
 	font-size: 1.6em;
 	line-height: 1.5em;
 	color: #666;
-	background-color: #fff6ed;
 }
 
 #header {
     padding: 30px 0;
 	
+    margin: 0 0 30px;
+    background-color: #fff6ed;
 }
 
 a:link, 

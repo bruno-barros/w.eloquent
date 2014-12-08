@@ -25,7 +25,7 @@ class Environment
 	 */ 
 	public function __construct($path, array $locations = array())
 	{
-		$this->path = $path;
+		$this->path = rtrim(rtrim($path, '/'), '\\').DS;
 		$this->locations = $locations;
 	}
 
@@ -36,7 +36,7 @@ class Environment
 	 */
 	public function which()
 	{
-		if(file_exists($this->path .'.env.local.php'))
+		if(file_exists($this->path.'.env.local.php'))
 		{
 			return 'local';
 		}

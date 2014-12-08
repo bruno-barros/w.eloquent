@@ -25,7 +25,7 @@ if (file_exists($autoload = $root_path.DS.'vendor'.DS.'autoload.php'))
  * ----------------------------------------------------
  * Define path and the environment locations.
  */
-$env = new Framework\Config\Environment($root_path.DS);
+$env = new Framework\Config\Environment($root_path);
 
 
 /**

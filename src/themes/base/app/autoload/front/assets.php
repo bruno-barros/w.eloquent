@@ -29,10 +29,9 @@
  * });
  */
 
-
 add_action('brain_loaded', function ()
 {
-
+	$env    = App::getFacadeApplication()['env'];
 	$ver    = Config::get('assets.ver');
 	$cssUrl = Config::get('assets.css.url');
 	$jsUrl  = Config::get('assets.js.url');
@@ -46,36 +45,36 @@ add_action('brain_loaded', function ()
 	\Brain\Assets::addFrontStyle('bootstrap-style-front')
 		->src($cssUrl . '/bootstrap.css')
 		->ver($ver)
-		->condition(function (WP_Query $query, $user)
+		->condition(function (WP_Query $query, $user) use ($env)
 		{
-			return (getenv('APP_ENV') === 'local') ? true : false;
+			return ($env === 'local') ? true : false;
 		});
 
 	\Brain\Assets::addFrontStyle('layout-front')
 		->src($cssUrl . '/layout.css')
-		->deps([ 'bootstrap-style-front' ])
+		->deps(['bootstrap-style-front'])
 		->ver($ver)
-		->condition(function (WP_Query $query, $user)
+		->condition(function (WP_Query $query, $user) use ($env)
 		{
-			return (getenv('APP_ENV') === 'local') ? true : false;
+			return ($env === 'local') ? true : false;
 		});
 
 	\Brain\Assets::addFrontStyle('modules-front')
 		->src($cssUrl . '/modules.css')
-		->deps([ 'layout-front' ])
+		->deps(['layout-front'])
 		->ver($ver)
-		->condition(function (WP_Query $query, $user)
+		->condition(function (WP_Query $query, $user) use ($env)
 		{
-			return (getenv('APP_ENV') === 'local') ? true : false;
+			return ($env === 'local') ? true : false;
 		});
 
 	\Brain\Assets::addFrontStyle('pages-front')
 		->src($cssUrl . '/pages.css')
-		->deps([ 'modules-front' ])
+		->deps(['modules-front'])
 		->ver($ver)
-		->condition(function (WP_Query $query, $user)
+		->condition(function (WP_Query $query, $user) use ($env)
 		{
-			return (getenv('APP_ENV') === 'local') ? true : false;
+			return ($env === 'local') ? true : false;
 		});
 
 	/**
@@ -87,11 +86,10 @@ add_action('brain_loaded', function ()
 	\Brain\Assets::addFrontStyle('styles-front')
 		->src($cssUrl . '/_global.css')
 		->ver($ver)
-		->condition(function (WP_Query $query, $user)
+		->condition(function (WP_Query $query, $user) use ($env)
 		{
-			return (getenv('APP_ENV') === 'production') ? true : false;
+			return ($env === 'production') ? true : false;
 		});
-
 
 	/**
 	 * ----------------------------------------------
@@ -101,20 +99,20 @@ add_action('brain_loaded', function ()
 	 */
 	\Brain\Assets::addFrontScript('bootstrap-script-front')
 		->src($jsUrl . '/bootstrap.min.js')
-		->deps([ 'jquery' ])
+		->deps(['jquery'])
 		->ver($ver)
-		->condition(function (WP_Query $query, $user)
+		->condition(function (WP_Query $query, $user) use ($env)
 		{
-			return (getenv('APP_ENV') === 'local') ? true : false;
+			return ($env === 'local') ? true : false;
 		});
 
 	\Brain\Assets::addFrontScript('page-all-front')
 		->src($jsUrl . '/page.all.js')
-		->deps([ 'bootstrap-script-front' ])
+		->deps(['bootstrap-script-front'])
 		->ver($ver)
-		->condition(function (WP_Query $query, $user)
+		->condition(function (WP_Query $query, $user) use ($env)
 		{
-			return (getenv('APP_ENV') === 'local') ? true : false;
+			return ($env === 'local') ? true : false;
 		});
 
 	/**
@@ -127,9 +125,9 @@ add_action('brain_loaded', function ()
 		->src($jsUrl . '/_global.js')
 		->provide(['jquery'])
 		->ver($ver)
-		->condition(function (WP_Query $query, $user)
+		->condition(function (WP_Query $query, $user) use ($env)
 		{
-			return (getenv('APP_ENV') === 'production') ? true : false;
+			return ($env === 'production') ? true : false;
 		});
 
 });

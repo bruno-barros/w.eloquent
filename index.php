@@ -7,6 +7,9 @@
 /*
 return array(
 
+	// if the .env.local.php is present the environment will be set to 'local'
+	// by default, but you can set a personal environment configuration for some
+	// part of the application
 	'APP_ENV'     => 'local',
 
 	'APP_THEME'   => 'base',
