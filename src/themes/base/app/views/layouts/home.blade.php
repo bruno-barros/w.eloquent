@@ -4,6 +4,7 @@
 ?>
 @section('body_middle')
 
+ 	@include('partials.header')
 
  	<div class="container">
 
@@ -11,7 +12,11 @@
 
  			<div class="col-sm-4">
 
- 			    @include('partials.header')
+				@section('menu')
+
+					{{ Menu::render('primary') }}
+
+				@show
 
 				@section('sidebar')
 

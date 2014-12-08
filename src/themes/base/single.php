@@ -3,24 +3,21 @@
 @section('main')
 
 
-
-
 	@var(mp = View::shared('myPost'))
-
-	{{ $mp->post_title or 'no title' }}
-
 
 
 	@loop
 
-		<h1>{{the_title()}}</h1>
+		<h1 class="page-title">{{ the_title() }}</h1>
+
+		<p><em>{{ $mp->post_date->format('d . M . y') }}</em></p>
 
 		{{ the_content() }}
 
 
 	@emptyloop
 
-		<p>404</p>
+		<h2>404</h2>
 
 	@endloop
 
