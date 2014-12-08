@@ -12,13 +12,13 @@ use Illuminate\Support\Facades\Input;
 class HomeController extends BaseController{
 
 
-	public function getIndex($name = '')
+	public function getIndex($args = '', $request)
 	{
 		/**
 		 * Do whatever you need
 		 */
 		$model = new Post();
-		$post = $model->where('post_name', $name)->first();
+		$post = $model->where('post_name', $args['name'])->first();
 
 		/**
 		 * Share data with views and subviews

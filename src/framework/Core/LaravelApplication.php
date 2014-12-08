@@ -100,11 +100,9 @@ Facade::setFacadeApplication($app);
 
 $aliases = array(
 	'app'            => 'Framework\Core\Application',
-//	'artisan'        => 'Illuminate\Console\Application',
 	'artisan'        => 'Framework\Core\Console\WelConsole',
 	'auth'           => 'Illuminate\Auth\AuthManager',
 	'auth.reminder.repository' => 'Illuminate\Auth\Reminders\ReminderRepositoryInterface',
-//	'blade.compiler' => 'Illuminate\View\Compilers\BladeCompiler',
 	'blade.compiler' => 'Framework\Plugins\Blade\BladeCompiler',
 	'cache'          => 'Illuminate\Cache\CacheManager',
 	'cache.store'    => 'Illuminate\Cache\Repository',
@@ -125,8 +123,8 @@ $aliases = array(
 	'queue'          => 'Illuminate\Queue\QueueManager',
 	'redirect'       => 'Illuminate\Routing\Redirector',
 	'redis'          => 'Illuminate\Redis\Database',
-	'request'        => 'Illuminate\Http\Request',
-	'router'         => 'Illuminate\Routing\Router',
+//	'request'        => 'Illuminate\Http\Request',
+//	'router'         => 'Illuminate\Routing\Router',
 	'session'        => 'Illuminate\Session\SessionManager',
 	'session.store'  => 'Illuminate\Session\Store',
 	'remote'         => 'Illuminate\Remote\RemoteManager',
@@ -224,62 +222,3 @@ Request::enableHttpMethodParameterOverride();
 $providers = $config['providers'];
 
 $app->getProviderRepository()->load($app, $providers);
-
-/*
-|--------------------------------------------------------------------------
-| Register Booted Start Files
-|--------------------------------------------------------------------------
-|
-| Once the application has been booted there are several "start" files
-| we will want to include. We'll register our "booted" handler here
-| so the files are included after the application gets booted up.
-|
-*/
-
-$app->booted(function() use ($app, $env)
-{
-
-	/*
-	|--------------------------------------------------------------------------
-	| Load The Application Routes
-	|--------------------------------------------------------------------------
-	|
-	| The Application routes are kept separate from the application starting
-	| just to keep the file a little cleaner. We'll go ahead and load in
-	| all of the routes now and return the application to the callers.
-	|
-	*/
-
-	//	$routes = $app['path'].'/routes.php';
-	//
-	//	if (file_exists($routes)) require $routes;
-
-});
-
-$routes = $app['path'].'/config/routes.php';
-if (file_exists($routes)) require $routes;
-
-/*
-|--------------------------------------------------------------------------
-| Run The Application
-|--------------------------------------------------------------------------
-|
-| Once we have the application, we can simply call the run method,
-| which will execute the request and send the response back to
-| the client's browser allowing them to enjoy the creative
-| and wonderful application we have whipped up for them.
-|
-*/
-try{
-	$request = \Illuminate\Http\Request::createFromGlobals();
-	$response = $app['router']->dispatch($request);
-	$response->send();
-
-//	$app->run();
-
-} catch (\Exception $e)
-{
-	/**
-	 * Otherwise use default Wordpress templates
-	 */
-}

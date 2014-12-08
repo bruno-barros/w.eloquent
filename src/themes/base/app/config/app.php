@@ -34,7 +34,7 @@ return [
 		'Illuminate\Cache\CacheServiceProvider',
 //		'Illuminate\Session\CommandsServiceProvider',
 //		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
-		'Illuminate\Routing\ControllerServiceProvider',
+//		'Illuminate\Routing\ControllerServiceProvider',
 		'Illuminate\Cookie\CookieServiceProvider',
 		'Illuminate\Database\DatabaseServiceProvider',
 		'Illuminate\Encryption\EncryptionServiceProvider',
@@ -64,7 +64,8 @@ return [
 		 * Corcel Eloquent Models for Wordpress
 		 * @link https://github.com/jgrossi/corcel
 		 */
-		'Framework\Providers\EloquentBootstrapServiceProvider'
+		'Framework\Providers\EloquentBootstrapServiceProvider',
+		'Framework\Providers\RouteServiceProvider',
 
 	),
 
@@ -77,7 +78,7 @@ return [
 		'Cache'             => 'Illuminate\Support\Facades\Cache',
 		'ClassLoader'       => 'Illuminate\Support\ClassLoader',
 		'Config'            => 'Illuminate\Support\Facades\Config',
-		'Controller'        => 'Illuminate\Routing\Controller',
+//		'Controller'        => 'Illuminate\Routing\Controller',
 		'Cookie'            => 'Illuminate\Support\Facades\Cookie',
 		'Crypt'             => 'Illuminate\Support\Facades\Crypt',
 		'DB'                => 'Illuminate\Support\Facades\DB',
@@ -91,6 +92,7 @@ return [
 		'Lang'              => 'Illuminate\Support\Facades\Lang',
 		'Log'               => 'Illuminate\Support\Facades\Log',
 		'Mail'              => 'Illuminate\Support\Facades\Mail',
+		'Menu'              => 'Framework\Facades\Menu',
 		'Paginator'         => 'Illuminate\Support\Facades\Paginator',
 		'Password'          => 'Illuminate\Support\Facades\Password',
 		'Queue'             => 'Illuminate\Support\Facades\Queue',
@@ -98,7 +100,7 @@ return [
 		'Redis'             => 'Illuminate\Support\Facades\Redis',
 		'Request'           => 'Illuminate\Support\Facades\Request',
 		'Response'          => 'Illuminate\Support\Facades\Response',
-		'Route'             => 'Illuminate\Support\Facades\Route',
+		'Route'             => 'Framework\Facades\Route',
 		'Schema'            => 'Illuminate\Support\Facades\Schema',
 		'Seeder'            => 'Illuminate\Database\Seeder',
 		'Session'           => 'Illuminate\Support\Facades\Session',
@@ -109,7 +111,6 @@ return [
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
 
-		'Menu'              => 'Framework\Facades\Menu',
 	),
 
 ];
