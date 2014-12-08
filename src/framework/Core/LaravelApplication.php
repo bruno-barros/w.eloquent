@@ -1,20 +1,4 @@
 <?php
-/**
- * The plugin bootstrap file
- *
- * @wordpress-plugin
- * Plugin Name: Latavel Application
- * Plugin URI: http://brunobarros.com/
- * Description: Laravel start file
- * Version: 1.0.0
- * Author: Bruno Barros
- * Author URI: http://www.brunobarros.com/
- * License: GPLv2
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       app-integration
- * Domain Path:       /languages
- */
-
 // If this file is called directly, abort.
 if (!defined('WPINC'))
 {
@@ -59,7 +43,7 @@ $app = new \Framework\Core\Application;
 |
 */
 
-$objEnv = new Framework\Config\Environment(dirname(ABSPATH).DS);
+$objEnv = new Framework\Config\Environment(dirname(ABSPATH));
 $env = $objEnv->which();
 $app['env'] = $env;
 /*
@@ -72,7 +56,7 @@ $app['env'] = $env;
 | may do so within the paths.php file and they will be bound here.
 |
 */
-$app->bindInstallPaths(require dirname(ABSPATH).'/src/config/paths.php');
+$app->bindInstallPaths(require SRC_PATH.'/framework/bootstrap/paths.php');
 
 
 /*

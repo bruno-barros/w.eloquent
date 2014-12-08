@@ -3,6 +3,7 @@
 Thumbs.db
 .htaccess
 node_modules
+debug.log
 
 ### Composer
 composer.lock

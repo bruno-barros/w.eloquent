@@ -4,7 +4,7 @@
  * Paths
  * ----------------------------------------------------
  */
-define('SRC_PATH', dirname(__DIR__));
+define('SRC_PATH', dirname(dirname(__DIR__)));
 
 $root_path = str_replace('\src', '', SRC_PATH);
 
@@ -70,7 +70,7 @@ else
  * Load environment config constants
  * ----------------------------------------------------
  */
-if (file_exists($config = $root_path.DS.'src/config'.DS.'environments'.DS.$location.'.php'))
+if (file_exists($config = $root_path.DS.'src'.DS.'framework'.DS.'bootstrap'.DS.$location.'.php'))
 {
 	require_once($config);
 }
@@ -97,7 +97,7 @@ define('APP_THEME', getenv('APP_THEME'));
  * Include shared configuration
  * ----------------------------------------------------
  */
-if (file_exists($shared = $root_path.DS.'src/config'.DS.'shared.php'))
+if (file_exists($shared = $root_path.DS.'src'.DS.'framework'.DS.'bootstrap'.DS.'shared.php'))
 {
 	require_once($shared);
 }

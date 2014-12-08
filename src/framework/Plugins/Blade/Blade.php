@@ -42,7 +42,7 @@ class BladePlugin
 	{
 
 		$this->app   = App::getFacadeApplication();
-		$this->paths = require SRC_PATH . '/config/paths.php';
+		$this->paths = require SRC_PATH . '/framework/bootstrap/paths.php';
 
 		// Bind to template include action
 //		add_action('template_redirect', array($this, 'redirect'));
@@ -83,7 +83,7 @@ class BladePlugin
 
 		$viewsFromConfig = $this->app['config']->get('view.paths');
 
-		$views = array_merge((array)$viewsFromConfig, (array)$this->paths['public']);
+		$views = array_merge((array)$viewsFromConfig, (array)$this->paths['theme']);
 		$cache = $this->paths['storage'] . '/views';
 
 		$blade = new BladeAdapter($views, $cache);

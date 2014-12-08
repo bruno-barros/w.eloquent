@@ -4,7 +4,7 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
-	| Application Path. The base theme!
+	| Application Path of the theme
 	|--------------------------------------------------------------------------
 	|
 	| Here we just defined the path to the application directory. Most likely
@@ -12,11 +12,11 @@ return array(
 	| work perfectly fine for the vast majority of all our applications.
 	|
 	*/
-	'app' => __DIR__.'/../themes/'.APP_THEME.'/app',
+	'app' => __DIR__.'/../../themes/'.APP_THEME.'/app',
 
 	/*
 	|--------------------------------------------------------------------------
-	| Public Path
+	| Theme Path
 	|--------------------------------------------------------------------------
 	|
 	| The public path contains the assets for your web application, such as
@@ -25,7 +25,7 @@ return array(
 	|
 	*/
 
-	'public' => __DIR__.'/../themes/'.APP_THEME,
+	'theme' => __DIR__.'/../../themes/'.APP_THEME,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -38,7 +38,7 @@ return array(
 	|
 	*/
 
-	'base' => __DIR__.'/../..',
+	'base' => __DIR__.'/../../..',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -51,6 +51,6 @@ return array(
 	|
 	*/
 
-	'storage' => __DIR__.'/../storage',
+	'storage' => __DIR__.'/../../storage',
 
 );

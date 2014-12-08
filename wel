@@ -18,7 +18,7 @@ require(dirname(__FILE__) . '/cms/wp-load.php');
  * -------------------------------------------------------------------
  */
 
-require_once __DIR__ . '/src/framework/Plugins/LaravelApplication/laravel-app-init.php';
+require_once __DIR__ . '/src/framework/Core/LaravelApplication.php';
 # $app <-- available
 
 
