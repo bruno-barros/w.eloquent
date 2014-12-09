@@ -10,14 +10,16 @@ Documentation is being building on [wiki page](https://github.com/bruno-barros/w
 ### Goals
 Run `composer install` and have a system in place with:
 
-	- Wordpress as front and back-end
-	- Laravel as API and front-and (if necessary)
-	- Install Wordpress and plugins via composer
-	- Keeping plugins and themes for Wordpress environment as it is 
-	- Access to Laravel API, including Facades, inside Wordpress
-	- Access Wordpress API inside Laravel
-	
-	
+- Wordpress as front and back-end
+- Laravel as API and front-and (if necessary)
+- Install Wordpress and plugins via composer
+- Keeping plugins and themes for Wordpress environment as it is 
+- Access to Laravel API, including Facades, inside Wordpress
+- Access Wordpress API inside Laravel
+
+### Theme (to jump into)
+[w.eloquent starter theme](https://github.com/bruno-barros/weloquent-starter-theme)
+
 ### Inspirations
 These are projects I like and did inspire me to put it all together:
 
