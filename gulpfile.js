@@ -18,15 +18,11 @@ var theme = 'src/themes/base/app/assets';
  * Assets to combine on global file
  */
 var CSS_FILES = [
-	theme + '/css/bootstrap.css',
-	theme + '/css/layout.css',
-	theme + '/css/modules.css',
-	theme + '/css/pages.css'
+	//theme + '/css/bootstrap.css'
 ];
 
 var JS_FILES = [
-	theme + '/js/bootstrap.min.js',
-	theme + '/js/page.all.js'
+	//theme + '/js/bootstrap.min.js'
 ];
 
 

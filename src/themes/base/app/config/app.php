@@ -55,13 +55,13 @@ return [
 		'Framework\Providers\WelServiceProvider',
 		'Framework\Providers\ConsoleSupportServiceProvider',
 		'Framework\Providers\NavigationServiceProvider',
+		'Framework\Providers\RouteServiceProvider',
 
 		/**
 		 * Corcel Eloquent Models for Wordpress
 		 * @link https://github.com/jgrossi/corcel
 		 */
 		'Framework\Providers\EloquentBootstrapServiceProvider',
-		'Framework\Providers\RouteServiceProvider',
 
 	),
 

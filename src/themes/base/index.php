@@ -67,7 +67,7 @@
 
 		<hr/>
 
-		<a href="https://github.com/bruno-barros/weloquent-theme-base" class="get-theme">get a base theme on github</a>
+		<a href="https://github.com/bruno-barros/weloquent-starter-theme" class="get-theme">get a base theme on github</a>
 
 	</div>
 
