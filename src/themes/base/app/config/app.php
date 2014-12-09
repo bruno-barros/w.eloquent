@@ -29,12 +29,8 @@ return [
 
 	'providers' => array(
 
-//		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
-//		'Illuminate\Session\CommandsServiceProvider',
-//		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
-//		'Illuminate\Routing\ControllerServiceProvider',
 		'Illuminate\Cookie\CookieServiceProvider',
 		'Illuminate\Database\DatabaseServiceProvider',
 		'Illuminate\Encryption\EncryptionServiceProvider',
@@ -78,7 +74,6 @@ return [
 		'Cache'             => 'Illuminate\Support\Facades\Cache',
 		'ClassLoader'       => 'Illuminate\Support\ClassLoader',
 		'Config'            => 'Illuminate\Support\Facades\Config',
-//		'Controller'        => 'Illuminate\Routing\Controller',
 		'Cookie'            => 'Illuminate\Support\Facades\Cookie',
 		'Crypt'             => 'Illuminate\Support\Facades\Crypt',
 		'DB'                => 'Illuminate\Support\Facades\DB',
