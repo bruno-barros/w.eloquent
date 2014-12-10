@@ -13,10 +13,8 @@
 	"type": "project",
 	"autoload": {
 		"files": [
-			"src/framework/Support/helpers.php"
 		],
 		"psr-4": {
-			"Framework\\": "src/framework",
 			"App\\": "src/themes/base/app"
 		}
 	},
@@ -26,17 +24,7 @@
 	},
 	"require": {
 		"php": ">=5.4",
-		"composer/installers": "~1.0",
-		"johnpbloch/wordpress": ">=4.0",
-		"jgrossi/corcel": "dev-master",
-		"laravel/framework": "4.2.*",
-		"brain/brain": "dev-master",
-		"brain/support": "dev-master",
-		"brain/amygdala": "dev-master",
-		"brain/striatum": "dev-master",
-		"brain/occipital": "dev-master",
-		"brain/cortex": "dev-master",
-		"symfony/routing": "2.*"
+		"bruno-barros/w.eloquent-framework": "dev-master"
 	},
     "extra":{
         "installer-paths":{

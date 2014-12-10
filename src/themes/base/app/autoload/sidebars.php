@@ -5,7 +5,8 @@
  * ----------------------------------------
  */
 
-$appPlugin = \Framework\Plugins\AppIntegration\Includes\AppIntegration::getInstance();
+$appPlugin = \Weloquent\Plugins\AppIntegration\Includes\AppIntegration::getInstance();
+
 
 add_action('widgets_init', function () use ($appPlugin)
 {

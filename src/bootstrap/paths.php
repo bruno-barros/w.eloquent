@@ -12,7 +12,7 @@ return array(
 	| work perfectly fine for the vast majority of all our applications.
 	|
 	*/
-	'app' => __DIR__.'/../../themes/'.APP_THEME.'/app',
+	'app' => __DIR__.'/../themes/'.APP_THEME.'/app',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -25,7 +25,7 @@ return array(
 	|
 	*/
 
-	'theme' => __DIR__.'/../../themes/'.APP_THEME,
+	'theme' => __DIR__.'/../themes/'.APP_THEME,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -38,7 +38,7 @@ return array(
 	|
 	*/
 
-	'base' => __DIR__.'/../../..',
+	'base' => __DIR__.'/../..',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -51,6 +51,18 @@ return array(
 	|
 	*/
 
-	'storage' => __DIR__.'/../../storage',
+	'storage' => __DIR__.'/../storage',
+
+
+	/*
+	|--------------------------------------------------------------------------
+	| Weloquent framework
+	|--------------------------------------------------------------------------
+	|
+	| Path to the framework
+	|
+	*/
+
+	'framework' => __DIR__.'/../../vendor/bruno-barros/w.eloquent-framework/src/weloquent',
 
 );

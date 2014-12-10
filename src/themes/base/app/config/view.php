@@ -1,5 +1,8 @@
 <?php
 
+$paths = require SRC_PATH . '/bootstrap/paths.php';
+
+
 return array(
 
 	/*
@@ -14,8 +17,8 @@ return array(
 	*/
 
 	'paths' => array(
-		dirname(ABSPATH).'/src/themes/'.APP_THEME,
-		dirname(ABSPATH).'/src/themes/'.APP_THEME.'/app/views',
+		$paths['theme'],
+		$paths['theme'].'/app/views',
 	),
 
 	/*

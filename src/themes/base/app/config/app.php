@@ -52,16 +52,16 @@ return [
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-		'Framework\Providers\WelServiceProvider',
-		'Framework\Providers\ConsoleSupportServiceProvider',
-		'Framework\Providers\NavigationServiceProvider',
-		'Framework\Providers\RouteServiceProvider',
+		'Weloquent\Providers\WelServiceProvider',
+		'Weloquent\Providers\ConsoleSupportServiceProvider',
+		'Weloquent\Providers\NavigationServiceProvider',
+		'Weloquent\Providers\RouteServiceProvider',
 
 		/**
 		 * Corcel Eloquent Models for Wordpress
 		 * @link https://github.com/jgrossi/corcel
 		 */
-		'Framework\Providers\EloquentBootstrapServiceProvider',
+		'Weloquent\Providers\EloquentBootstrapServiceProvider',
 
 	),
 
@@ -87,7 +87,7 @@ return [
 		'Lang'              => 'Illuminate\Support\Facades\Lang',
 		'Log'               => 'Illuminate\Support\Facades\Log',
 		'Mail'              => 'Illuminate\Support\Facades\Mail',
-		'Menu'              => 'Framework\Facades\Menu',
+		'Menu'              => 'Weloquent\Facades\Menu',
 		'Paginator'         => 'Illuminate\Support\Facades\Paginator',
 		'Password'          => 'Illuminate\Support\Facades\Password',
 		'Queue'             => 'Illuminate\Support\Facades\Queue',
@@ -95,7 +95,7 @@ return [
 		'Redis'             => 'Illuminate\Support\Facades\Redis',
 		'Request'           => 'Illuminate\Support\Facades\Request',
 		'Response'          => 'Illuminate\Support\Facades\Response',
-		'Route'             => 'Framework\Facades\Route',
+		'Route'             => 'Weloquent\Facades\Route',
 		'Schema'            => 'Illuminate\Support\Facades\Schema',
 		'Seeder'            => 'Illuminate\Database\Seeder',
 		'Session'           => 'Illuminate\Support\Facades\Session',
