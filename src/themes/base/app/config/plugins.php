@@ -2,21 +2,21 @@
 /**
  * Must use plugins
  */
-
-$paths = require SRC_PATH . '/bootstrap/paths.php';
-
+ 
 return array(
-
 	/**
-	 * Blade engine
+	 * Blade engine (optional)
 	 * @link http://laravel.com/docs/4.2/templates
 	 */
-	$paths['framework'] . '/Plugins/Blade/blade.php',
-
+	'blade',
 	/**
-	 * Router, Assets for Word press
+	 * Router, Assets for Wordpress (optional)
 	 * @link http://giuseppe-mazzapica.github.io/Brain/
 	 */
-	$paths['framework'] . '/Plugins/BrainPlugins/brain-plugins.php',
-
+	'brain',
+	/**
+	 * set the full path to the plugins you need to load
+	 * as Must Use Plugin
+	 */
+	//	SRC_PATH . '/plugins/my-plugin/my-plugin.php'
 );
