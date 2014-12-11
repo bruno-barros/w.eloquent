@@ -3,6 +3,13 @@
  * Load required plugins
  */
 
+if(defined('WEL_ENV'))
+{
+	// On comand line environment prevent booting twice
+	// and load unnecessary plugins
+	return;
+}
+
 $paths = require SRC_PATH . '/bootstrap/paths.php';
 
 /**

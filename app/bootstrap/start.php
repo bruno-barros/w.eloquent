@@ -32,7 +32,7 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment(function(){
 
 	$root_path = dirname(dirname(__DIR__));
-	$env = new \Framework\Config\Environment($root_path.DS);
+	$env = new \Weloquent\Config\Environment($root_path.DS);
 
 	return $env->which();
 });

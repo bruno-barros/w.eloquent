@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+define('WEL_ENV', true);
+
 /**
  * -------------------------------------------------------------------
  * Tells WordPress to load the WordPress theme and output it.
@@ -17,9 +19,7 @@ require(dirname(__FILE__) . '/cms/wp-load.php');
  * Start Laravel App
  * -------------------------------------------------------------------
  */
-
-require_once __DIR__ . '/src/framework/Core/LaravelApplication.php';
-# $app <-- available
+$app = require __DIR__.'/vendor/bruno-barros/w.eloquent-framework/src/weloquent/Core/LaravelApplication.php';
 
 
 /**
@@ -30,7 +30,7 @@ require_once __DIR__ . '/src/framework/Core/LaravelApplication.php';
 $app->setRequestForConsoleEnvironment();
 
 //$artisan = Illuminate\Console\Application::start($app);
-$wel = Framework\Core\Console\WelConsole::start($app);
+$wel = Weloquent\Core\Console\WelConsole::start($app);
 
 
 /**
