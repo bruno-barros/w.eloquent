@@ -1,42 +1,53 @@
 {
-	"name": "bruno-barros/w.eloquent",
-	"description": "Wordpress integrated with Laravel via Composer. Together, but independents.",
-	"keywords": ["Laravel", "framework", "WordPress"],
-	"license": "GPL-2.0+",
-	"authors": [
-		{
-			"name": "Bruno Barros",
-			"email": "bruno@brunobarros.com",
-			"homepage": "http://www.brunobarros.com/"
-		}
-	],
-	"type": "project",
-	"autoload": {
-		"files": [
-		],
-		"psr-4": {
-			"App\\": "src/themes/base/app"
-		}
-	},
-	"config": {
-		"preferred-install": "dist",
-		"optimize-autoloader": true
-	},
-	"require": {
-		"php": ">=5.4",
-		"bruno-barros/w.eloquent-framework": "dev-master"
-	},
-    "extra":{
-        "installer-paths":{
-            "src/plugins/themosis-{$name}/": ["themosis/framework"],
-			"src/plugins/{$name}/": ["type:wordpress-plugin"],
-			"src/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-            "src/themes/themosis-{$name}/": ["themosis/theme"],
-            "src/themes/{$name}/": ["type:wordpress-theme"]
-        },
-        "wordpress-install-dir": "cms"
+  "name": "bruno-barros/w.eloquent",
+  "description": "Wordpress integrated with Laravel via Composer. Together, but independents.",
+  "keywords": [
+    "Laravel",
+    "framework",
+    "WordPress"
+  ],
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Bruno Barros",
+      "email": "bruno@brunobarros.com",
+      "homepage": "http://www.brunobarros.com/"
+    }
+  ],
+  "type": "project",
+  "autoload": {
+    "files": [
+    ],
+    "classmap": [
+    ],
+    "psr-4": {
+      "App\\": "src/themes/base/app",
+      "Starter\\": "src/themes/starter/app"
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "optimize-autoloader": true
+  },
+  "require": {
+    "php": ">=5.4",
+    "bruno-barros/w.eloquent-framework": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*",
+    "mockery/mockery": "dev-master",
+    "10up/wp_mock": "dev-master"
+  },
+  "extra": {
+    "installer-paths": {
+      "src/plugins/themosis-{$name}/": ["themosis/framework"],
+      "src/plugins/{$name}/": ["type:wordpress-plugin"],
+      "src/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "src/themes/themosis-{$name}/": ["themosis/theme"],
+      "src/themes/{$name}/": ["type:wordpress-theme"]
     },
-
-	"minimum-stability" : "dev",
-	"prefer-stable": true
+    "wordpress-install-dir": "cms"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

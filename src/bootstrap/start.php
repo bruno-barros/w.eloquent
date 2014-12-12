@@ -71,6 +71,11 @@ else
  * Load environment config constants
  * ----------------------------------------------------
  */
+//if($env->isTesting())
+//{
+//	$location = 'testing';
+//}
+
 if (file_exists($config = $root_path.DS.'src'.DS.'bootstrap'.DS.$location.'.php'))
 {
 	require_once($config);
