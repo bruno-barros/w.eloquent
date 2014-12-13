@@ -17,8 +17,10 @@ Run `composer install` and have a system in place with:
 - Access to Laravel API, including Facades, inside Wordpress
 - Access Wordpress API inside Laravel
 
-### Theme (to jump into)
-[w.eloquent starter theme](https://github.com/bruno-barros/weloquent-starter-theme)
+### Theme features
+The w.eloquent project comes with a very simple theme (base).
+
+To see the very features you have at your disposal, see the [w.eloquent starter theme](https://github.com/bruno-barros/weloquent-starter-theme)
 
 ### Inspirations
 These are projects I like and did inspire me to put it all together:
