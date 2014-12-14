@@ -3,7 +3,7 @@
  * Load required plugins
  */
 
-if(defined('WEL_ENV'))
+if(defined('WELOQUENT_TEST_ENV'))
 {
 	// On comand line environment prevent booting twice
 	// and load unnecessary plugins
