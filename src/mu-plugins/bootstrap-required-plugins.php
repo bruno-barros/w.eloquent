@@ -1,20 +1,5 @@
 <?php
 /**
- * ----------------------------------------------------
- * Load required plugins
- * ----------------------------------------------------
- */
-
-if(defined('WELOQUENT_TEST_ENV'))
-{
-	// On comand line environment prevent booting twice
-	// and load unnecessary plugins
-	return;
-}
-
-$paths = require SRC_PATH . '/bootstrap/paths.php';
-
-/**
  * --------------------------------------------
  * Load required plugins (do not remove it)
  * --------------------------------------------
@@ -27,6 +12,8 @@ $paths = require SRC_PATH . '/bootstrap/paths.php';
  * ------------------------------------------
  * @see app/config/plugins.php
  */
+$paths = require SRC_PATH . '/bootstrap/paths.php';
+
 if(file_exists($pluginsPath = $paths['app'].DS.'config'.DS.'plugins.php'))
 {
 	\Weloquent\Plugins\PluginsLoader::loadFromPath($pluginsPath);
