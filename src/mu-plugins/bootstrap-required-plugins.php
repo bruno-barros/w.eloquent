@@ -1,6 +1,8 @@
 <?php
 /**
+ * ----------------------------------------------------
  * Load required plugins
+ * ----------------------------------------------------
  */
 
 if(defined('WELOQUENT_TEST_ENV'))
@@ -19,16 +21,15 @@ $paths = require SRC_PATH . '/bootstrap/paths.php';
  */
 \Weloquent\Plugins\PluginsLoader::bootRequired();
 
-
-if(file_exists($paths['app'].DS.'config'.DS.'plugins.php'))
+/**
+ * ------------------------------------------
+ * Load plugins required from your app
+ * ------------------------------------------
+ * Some plugins are registered inside w.eloquent framework,
+ * but it is still optional.
+ * @see app/config/plugins.php
+ */
+if(file_exists($pluginsPath = $paths['app'].DS.'config'.DS.'plugins.php'))
 {
-	/**
-	 * ------------------------------------------
-	 * Load plugins required from your app
-	 * ------------------------------------------
-	 * Some plugins are registered inside w.eloquent framework,
-	 * but it is still optional.
-	 * @see app/config/plugins.php
-	 */
-	\Weloquent\Plugins\PluginsLoader::loadFromPath($paths['app'].DS.'config'.DS.'plugins.php');
+	\Weloquent\Plugins\PluginsLoader::loadFromPath($pluginsPath);
 }
