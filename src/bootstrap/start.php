@@ -4,9 +4,13 @@
  * Paths
  * ----------------------------------------------------
  */
+/** @var string $contentDirectory The source folder of the theme */
+$contentDirectory = 'src';
+
 define('SRC_PATH', dirname(__DIR__));
 
-$root_path = str_replace('\src', '', SRC_PATH);
+/** @var string $root_path The root folder of the project*/
+$root_path = str_replace(DS.$contentDirectory, '', SRC_PATH);
 
 /**
  * ----------------------------------------------------
@@ -25,7 +29,6 @@ if (file_exists($autoload = $root_path.DS.'vendor'.DS.'autoload.php'))
  * ----------------------------------------------------
  * Define path and the environment locations.
  */
-
 $env = new \Weloquent\Config\Environment($root_path);
 
 
@@ -48,7 +51,16 @@ if (empty($loaded)) printf('<h1>%s</h1>', 'Unable to locate your environment fil
  * Check required vars
  * ----------------------------------------------------
  */
-$check = $env->check(array('APP_ENV', 'APP_THEME', 'DB_NAME', 'DB_USER', 'DB_PASSWORD', 'DB_HOST', 'WP_HOME' , 'WP_SITEURL'), $loaded);
+$check = $env->check(array(
+	'APP_ENV',
+	'APP_THEME',
+	'DB_NAME',
+	'DB_USER',
+	'DB_PASSWORD',
+	'DB_HOST',
+	'WP_HOME',
+	'WP_SITEURL'
+), $loaded);
 
 
 /**
@@ -71,24 +83,10 @@ else
  * Load environment config constants
  * ----------------------------------------------------
  */
-//if($env->isTesting())
-//{
-//	$location = 'testing';
-//}
-
 if (file_exists($config = $root_path.DS.'src'.DS.'bootstrap'.DS.$location.'.php'))
 {
 	require_once($config);
 }
-
-/**
- * ----------------------------------------------------
- * Content directory
- * ----------------------------------------------------
- */
-define('CONTENT_DIR', 'src');
-define('WP_CONTENT_DIR', $root_path.DS.CONTENT_DIR);
-define('WP_CONTENT_URL', WP_HOME.'/'.CONTENT_DIR);
 
 /**
  * ----------------------------------------------------
@@ -109,12 +107,16 @@ if (file_exists($shared = $root_path.DS.'src'.DS.'bootstrap'.DS.'shared.php'))
 }
 
 
-
 /**
  * ----------------------------------------------------
- * Path to WordPress
+ * Paths to WordPress
  * ----------------------------------------------------
+ * Constants for WordPress environment
  */
+define('CONTENT_DIR', $contentDirectory);
+define('WP_CONTENT_DIR', $root_path.DS.CONTENT_DIR);
+define('WP_CONTENT_URL', WP_HOME.'/'.CONTENT_DIR);
+
 if (!defined('ABSPATH'))
 {
 	define('ABSPATH', $root_path.DS.'cms'.DS);
