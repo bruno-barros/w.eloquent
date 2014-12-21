@@ -25,8 +25,6 @@ $paths = require SRC_PATH . '/bootstrap/paths.php';
  * ------------------------------------------
  * Load plugins required from your app
  * ------------------------------------------
- * Some plugins are registered inside w.eloquent framework,
- * but it is still optional.
  * @see app/config/plugins.php
  */
 if(file_exists($pluginsPath = $paths['app'].DS.'config'.DS.'plugins.php'))
