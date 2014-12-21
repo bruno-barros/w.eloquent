@@ -9,18 +9,6 @@ define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 $table_prefix = getenv('DB_PREFIX') ? getenv('DB_PREFIX') : 'wp_';
 
-/**
- * -----------------------------------------------------
- * WordPress localized language
- * -----------------------------------------------------
- * WordPress Localized Language, defaults to English.
- *
- * Change this to localize WordPress. A corresponding MO file for the chosen
- * language must be installed to content/languages. For example, install
- * de_DE.mo to content/languages and set WPLANG to 'de_DE' to enable German
- * language support.
- */
-define('WPLANG', 'en');
 
 /**
  * -----------------------------------------------------

@@ -31,6 +31,7 @@
   },
   "require": {
     "php": ">=5.4",
+    "johnpbloch/wordpress": "4.1.*",
     "bruno-barros/w.eloquent-framework": "dev-master"
   },
   "require-dev": {
@@ -40,10 +41,8 @@
   },
   "extra": {
     "installer-paths": {
-      "src/plugins/themosis-{$name}/": ["themosis/framework"],
       "src/plugins/{$name}/": ["type:wordpress-plugin"],
       "src/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "src/themes/themosis-{$name}/": ["themosis/theme"],
       "src/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "cms"
