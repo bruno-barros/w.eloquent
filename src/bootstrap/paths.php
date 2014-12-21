@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 
 	/*
 	|--------------------------------------------------------------------------
@@ -65,4 +65,4 @@ return array(
 
 	'framework' => __DIR__.'/../../vendor/bruno-barros/w.eloquent-framework/src/weloquent',
 
-);
+];
