@@ -116,6 +116,7 @@ if (file_exists($shared = $root_path.DS.'src'.DS.'bootstrap'.DS.'shared.php'))
 define('CONTENT_DIR', $contentDirectory);
 define('WP_CONTENT_DIR', $root_path.DS.CONTENT_DIR);
 define('WP_CONTENT_URL', WP_HOME.'/'.CONTENT_DIR);
+define('WP_PLUGIN_DIR', WP_CONTENT_DIR.DS.'plugins');
 
 if (!defined('ABSPATH'))
 {

@@ -16,6 +16,9 @@ define('WP_SITEURL', getenv('WP_SITEURL'));
 // Development
 define('WP_DEBUG', false);
 
+// Cache system
+define('WP_CACHE', true);
+
 /**
  * SCRIPT_DEBUG is a related constant that will force WordPress to use the "dev" versions of core CSS and Javascript files rather than the minified versions that are normally loaded.
  */
