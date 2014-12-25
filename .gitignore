@@ -22,6 +22,8 @@ composer.lock
 /src/themes/*
 !/src/themes/.gitkeep
 !/src/themes/base
+/src/cache
+
 
 /src/storage/cache/*
 /src/storage/logs/*
