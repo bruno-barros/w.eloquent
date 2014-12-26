@@ -18,7 +18,7 @@ return array(
 	'DB_USER'     => '',
 	'DB_PASSWORD' => '',
 	'DB_HOST'     => 'localhost',
-	'DB_PREFIX'   => 'sig_',
+	'DB_PREFIX'   => 'wp_',
 	'WP_HOME'     => 'http://localhost/weloquent',
 	'WP_SITEURL'  => 'http://localhost/weloquent/cms',
 

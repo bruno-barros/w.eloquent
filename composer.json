@@ -47,6 +47,11 @@
     },
     "wordpress-install-dir": "cms"
   },
+  "scripts": {
+    "post-install-cmd": [
+      "php wel installation:update"
+    ]
+  },
   "minimum-stability": "dev",
   "prefer-stable": true
 }
