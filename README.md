@@ -1,10 +1,7 @@
-w.eloquent
-------------------
-![w.eoquent](https://github.com/bruno-barros/w.eloquent/blob/master/src/themes/base/screenshot.png)
+![w.eloquent](https://raw.githubusercontent.com/bruno-barros/w.eloquent-framework/master/weloquent.png)
 
 Wordpress integrated with Laravel via Composer. Together, but independents.
 
-## Still in development, but works.
 Documentation is being building on [wiki page](https://github.com/bruno-barros/w.eloquent/wiki).
 
 ### Goals
@@ -20,7 +17,7 @@ Run `composer install` and have a system in place with:
 ### Theme features
 The w.eloquent project comes with a very simple theme (base).
 
-To see the very features you have at your disposal, see the [w.eloquent starter theme](https://github.com/bruno-barros/weloquent-starter-theme)
+To see the very features you have at your disposal, check out the [w.eloquent starter theme](https://github.com/bruno-barros/weloquent-starter-theme)
 
 ### Inspirations
 These are projects I like and did inspire me to put it all together:
