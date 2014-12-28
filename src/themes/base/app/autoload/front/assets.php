@@ -5,7 +5,7 @@
  * ----------------------------------
  * @link https://github.com/Giuseppe-Mazzapica/Occipital
  *
- * Brain\Assets::addStyle( 'my-style' )
+ * Assets::addStyle( 'my-style' )
  *
  * ->src( Config::get('assets.css.url').'/layout.css' )
  *
@@ -35,6 +35,7 @@ add_action('brain_loaded', function ()
 	$ver    = Config::get('assets.ver');
 	$cssUrl = Config::get('assets.css.url');
 	$jsUrl  = Config::get('assets.js.url');
+
 
 
 });

@@ -27,7 +27,7 @@ return [
 	|
 	*/
 
-	'providers' => array(
+	'providers' => [
 
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
@@ -56,6 +56,7 @@ return [
 		'Weloquent\Providers\ConsoleSupportServiceProvider',
 		'Weloquent\Providers\NavigationServiceProvider',
 		'Weloquent\Providers\RouteServiceProvider',
+		'Weloquent\Providers\AssetsServiceProvider',
 
 		/**
 		 * Corcel Eloquent Models for Wordpress
@@ -63,12 +64,13 @@ return [
 		 */
 		'Weloquent\Providers\EloquentBootstrapServiceProvider',
 
-	),
+	],
 
-	'aliases' => array(
+	'aliases' => [
 
 		'App'               => 'Illuminate\Support\Facades\App',
 		'Artisan'           => 'Illuminate\Support\Facades\Artisan',
+		'Assets'            => 'Weloquent\Facades\Assets',
 		'Auth'              => 'Illuminate\Support\Facades\Auth',
 		'Blade'             => 'Illuminate\Support\Facades\Blade',
 		'Cache'             => 'Illuminate\Support\Facades\Cache',
@@ -106,6 +108,6 @@ return [
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
 
-	),
+	],
 
 ];
