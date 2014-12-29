@@ -57,6 +57,7 @@ return [
 		'Weloquent\Providers\NavigationServiceProvider',
 		'Weloquent\Providers\RouteServiceProvider',
 		'Weloquent\Providers\AssetsServiceProvider',
+		'Weloquent\Providers\HooksServiceProvider',
 
 		/**
 		 * Corcel Eloquent Models for Wordpress
@@ -84,6 +85,7 @@ return [
 		'File'              => 'Illuminate\Support\Facades\File',
 		'Form'              => 'Illuminate\Support\Facades\Form',
 		'Hash'              => 'Illuminate\Support\Facades\Hash',
+		'Hooks'             => 'Weloquent\Facades\Hooks',
 		'HTML'              => 'Illuminate\Support\Facades\HTML',
 		'Input'             => 'Illuminate\Support\Facades\Input',
 		'Lang'              => 'Illuminate\Support\Facades\Lang',

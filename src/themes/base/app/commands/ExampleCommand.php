@@ -37,7 +37,7 @@ class ExampleCommand extends Command {
 	 */
 	public function fire()
 	{
-		$this->line("Do some stuff here!!!");
+		$this->line("Hey there! I'm WEL. How are you?");
 	}
 
 	/**
@@ -48,7 +48,7 @@ class ExampleCommand extends Command {
 	protected function getArguments()
 	{
 		return array(
-			array('example', InputArgument::REQUIRED, 'An example argument.'),
+			array('example', InputArgument::OPTIONAL, 'An example argument.'),
 		);
 	}
 
