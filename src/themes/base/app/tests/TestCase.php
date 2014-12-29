@@ -1,4 +1,4 @@
-<?php namespace Starter\Tests;
+<?php namespace App\Tests;
 
 use Illuminate\Foundation\Testing\ApplicationTrait;
 

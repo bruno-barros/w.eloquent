@@ -1,6 +1,6 @@
-<?php  namespace Starter\tests\Unit;
+<?php  namespace App\tests\Unit;
 
-use Starter\Tests\TestCase;
+use App\Tests\TestCase;
 
 /**
  * ExampleTest
