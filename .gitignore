@@ -16,6 +16,8 @@ composer.lock
 /cms/*
 !/cms/.gitkeep
 /src/plugins/*
+!/src/plugins/
+!/src/plugins/.gitkeep
 /src/languages/*
 /src/uploads/*
 !/src/uploads/.gitkeep
