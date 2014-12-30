@@ -49,9 +49,9 @@ return [
 		'Illuminate\Session\SessionServiceProvider',
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
-		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		'Weloquent\Providers\ViewServiceProvider',
 		'Weloquent\Providers\WelServiceProvider',
 		'Weloquent\Providers\ConsoleSupportServiceProvider',
 		'Weloquent\Providers\NavigationServiceProvider',
