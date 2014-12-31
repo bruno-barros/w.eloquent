@@ -15,8 +15,9 @@ return array(
 	 */
 	'brain',
 	/**
-	 * set the full path to the plugins you need to load
-	 * as Must Use Plugin
+	 * Move the plugin to /mu-plugins folder and
+	 * set the full path to the plugins you need to
+	 * load as Must Use Plugin
 	 */
-	//	SRC_PATH . '/plugins/my-plugin/my-plugin.php'
+	//	SRC_PATH . '/mu-plugins/plugin-folder/plugin-init.php'
 );
