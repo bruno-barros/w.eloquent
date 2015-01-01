@@ -26,3 +26,36 @@ These are projects I like and did inspire me to put it all together:
 - [Laravel](http://laravel.com/)
 - [Themosis framework](http://framework.themosis.com/)
 - [Brain Project](http://giuseppe-mazzapica.github.io/Brain)
+
+### Status
+The packages are being adapted to WordPress environment.
+
+[ok] Views <br>
+[ok] Blade template engine <br>
+[ok] Routes by Cortex <br>
+[ok] Assets by Occiptial <br>
+[ok] Hooks by Striatum <br>
+[ok] Validation <br>
+[ok] CLI (php wel) <br>
+
+[  ] Auth <br>
+[  ] Cache <br>
+[  ] Cookie <br>
+[  ] Database <br>
+[  ] Encryption <br>
+[  ] Filesystem <br>
+[  ] Hash <br>
+[  ] Html <br>
+[  ] Log <br>
+[  ] Mail <br>
+[  ] Migration <br>
+[  ] Queue <br>
+[  ] Redis <br>
+[  ] Remote <br>
+[  ] Reminder <br>
+[  ] Seed <br>
+[  ] Session <br>
+[  ] Translation <br>
+
+[--] Workbench (not planned) <br>
+[--] Pagination (provided by WordPress) <br>
