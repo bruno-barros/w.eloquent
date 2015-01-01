@@ -2,6 +2,7 @@
 .DS_Store
 Thumbs.db
 .htaccess
+!/app/.htaccess
 node_modules
 debug.log
 
