@@ -1,9 +1,4 @@
 <?php
-if (!session_id())
-{
-	session_start();
-}
-
 /**
  * ----------------------------------------------------
  * Paths
@@ -94,13 +89,6 @@ if (file_exists($config = $root_path . DS . 'src' . DS . 'bootstrap' . DS . $loc
 	require_once($config);
 }
 
-/**
- * ----------------------------------------------------
- * Set the APP_THEME
- * ----------------------------------------------------
- * The theme the application is working.
- */
-define('APP_THEME', getenv('APP_THEME'));
 
 /**
  * ----------------------------------------------------

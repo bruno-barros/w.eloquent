@@ -34,7 +34,7 @@ return [
 	 * ahead and set this to a sensible default for you out of the box.
 	 */
 
-	'timezone' => 'UTC',
+	'timezone'        => 'UTC',
 
 	/**
 	 * --------------------------------------------------------------------------
@@ -98,7 +98,7 @@ return [
 	|
 	*/
 
-	'providers' => [
+	'providers'       => [
 
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
@@ -117,11 +117,11 @@ return [
 		'Illuminate\Remote\RemoteServiceProvider',
 		'Illuminate\Auth\Reminders\ReminderServiceProvider',
 		'Illuminate\Database\SeedServiceProvider',
-		'Illuminate\Session\SessionServiceProvider',
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		'Weloquent\Providers\SessionServiceProvider',
 		'Weloquent\Providers\ViewServiceProvider',
 		'Weloquent\Providers\WelServiceProvider',
 		'Weloquent\Providers\ConsoleSupportServiceProvider',
@@ -138,7 +138,7 @@ return [
 
 	],
 
-	'aliases' => [
+	'aliases'         => [
 
 		'App'               => 'Illuminate\Support\Facades\App',
 		'Artisan'           => 'Illuminate\Support\Facades\Artisan',

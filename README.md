@@ -37,15 +37,17 @@ The packages are being adapted to WordPress environment.
 [ok] Hooks by Striatum <br>
 [ok] Validation <br>
 [ok] CLI (php wel) <br>
+[ok] Cache <br>
+[ok] Hash <br>
+[ok] Filesystem <br>
+[ok] Html <br>
+[ok] Translation <br>
+[ok] Encryption <br>
+[ok] Cookie <br>
+[ok] Session <br>
 
 [  ] Auth <br>
-[  ] Cache <br>
-[  ] Cookie <br>
 [  ] Database <br>
-[  ] Encryption <br>
-[  ] Filesystem <br>
-[  ] Hash <br>
-[  ] Html <br>
 [  ] Log <br>
 [  ] Mail <br>
 [  ] Migration <br>
@@ -54,8 +56,6 @@ The packages are being adapted to WordPress environment.
 [  ] Remote <br>
 [  ] Reminder <br>
 [  ] Seed <br>
-[  ] Session <br>
-[  ] Translation <br>
 
 [--] Workbench (not planned) <br>
 [--] Pagination (provided by WordPress) <br>

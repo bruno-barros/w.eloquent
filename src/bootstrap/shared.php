@@ -22,6 +22,15 @@ if (!defined('ABSPATH'))
 	define('ABSPATH', $root_path.DS.'cms'.DS);
 }
 
+
+/**
+ * ----------------------------------------------------
+ * Set the APP_THEME
+ * ----------------------------------------------------
+ * The theme the application is working.
+ */
+define('APP_THEME', getenv('APP_THEME'));
+
 /**
  * -----------------------------------------------------
  * Database
