@@ -46,16 +46,16 @@ The packages are being adapted to WordPress environment.
 [ok] Cookie <br>
 [ok] Session <br>
 [ok] Database <br>
+[ok] Migration <br>
+[ok] Seed <br>
 
 [  ] Auth <br>
 [  ] Log <br>
 [  ] Mail <br>
-[  ] Migration <br>
 [  ] Queue <br>
 [  ] Redis <br>
 [  ] Remote <br>
 [  ] Reminder <br>
-[  ] Seed <br>
 
 [--] Workbench (not planned) <br>
 [--] Pagination (provided by WordPress) <br>
