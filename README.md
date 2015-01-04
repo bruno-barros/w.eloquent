@@ -1,8 +1,8 @@
 ![w.eloquent](https://raw.githubusercontent.com/bruno-barros/w.eloquent-framework/master/weloquent.png)
 
-Wordpress integrated with Laravel via Composer. Together, but independents.
+Wordpress integrated with Laravel via Composer.
 
-Documentation is being building on [wiki page](https://github.com/bruno-barros/w.eloquent/wiki).
+#### Documentation is being building on [wiki page](https://github.com/bruno-barros/w.eloquent/wiki).
 
 ### Goals
 Run `composer install` and have a system in place with:
