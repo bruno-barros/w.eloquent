@@ -7,7 +7,7 @@
  */
 
 // keep it to avoid run on Laravel environment
-if(! WP_USE_THEMES)
+if(defined('WP_USE_THEMES') && ! WP_USE_THEMES)
 {
 	return;
 }
