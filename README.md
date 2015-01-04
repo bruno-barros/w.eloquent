@@ -45,9 +45,9 @@ The packages are being adapted to WordPress environment.
 [ok] Encryption <br>
 [ok] Cookie <br>
 [ok] Session <br>
+[ok] Database <br>
 
 [  ] Auth <br>
-[  ] Database <br>
 [  ] Log <br>
 [  ] Mail <br>
 [  ] Migration <br>
