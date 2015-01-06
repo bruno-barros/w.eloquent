@@ -48,8 +48,8 @@ The packages are being adapted to WordPress environment.
 [ok] Database <br>
 [ok] Migration <br>
 [ok] Seed <br>
+[ok] Auth <br>
 
-[  ] Auth <br>
 [  ] Log <br>
 [  ] Mail <br>
 [  ] Queue <br>

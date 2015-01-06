@@ -11,11 +11,22 @@ return [
 	 *  This driver manages the retrieval and authentication of the users
 	 *  attempting to get access to protected areas of your application.
 	 *
-	 *  Supported: "database", "eloquent"
+	 *  Supported: "wordpress", "database", "eloquent"
 	 *
 	 */
 
-	'driver'   => 'eloquent',
+	'driver'   => 'wordpress',
+
+	/**
+	 * --------------------------------------------------------------------------
+	 * Attempting credentials fields
+	 * --------------------------------------------------------------------------
+	 *
+	 * This configuration allows you to set the input fields names to attempt
+	 * the authentication database fields
+	 */
+
+	'credentials' => ['login' => 'user_login', 'password' => 'user_password'],
 
 	/**
 	 * --------------------------------------------------------------------------
