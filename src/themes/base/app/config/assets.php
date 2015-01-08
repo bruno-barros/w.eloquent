@@ -8,13 +8,13 @@ return [
 
 	'url' => get_template_directory_uri().'/app/assets',
 
-	'path' => TEMPLATEPATH.'/app/assets',
+	'path' => get_template_directory().'/app/assets',
 
 	'css' => [
 
 		'url' => get_template_directory_uri().'/app/assets/css',
 
-		'path' => TEMPLATEPATH.'/app/assets/css',
+		'path' => get_template_directory().'/app/assets/css',
 
 	],
 
@@ -22,7 +22,7 @@ return [
 
 		'url' => get_template_directory_uri().'/app/assets/js',
 
-		'path' => TEMPLATEPATH.'/app/assets/js',
+		'path' => get_template_directory().'/app/assets/js',
 
 	],
 
