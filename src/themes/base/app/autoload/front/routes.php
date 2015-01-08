@@ -4,7 +4,5 @@
  * Routes
  * -------------------------------
  */
-add_action('brain_loaded', function ()
-{
-	// ...
-});
+
+// ...

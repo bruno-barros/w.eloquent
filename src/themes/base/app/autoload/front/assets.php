@@ -29,14 +29,7 @@
  * });
  */
 
-add_action('brain_loaded', function ()
-{
-	$env    = App::getFacadeApplication()['env'];
-	$ver    = Config::get('assets.ver');
-	$cssUrl = Config::get('assets.css.url');
-	$jsUrl  = Config::get('assets.js.url');
-
-
-
-});
-
+$env    = App::getFacadeApplication()['env'];
+$ver    = Config::get('assets.ver');
+$cssUrl = Config::get('assets.css.url');
+$jsUrl  = Config::get('assets.js.url');

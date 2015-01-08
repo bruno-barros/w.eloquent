@@ -12,13 +12,13 @@
 if (wp_get_theme()->get_template() !== APP_THEME || wp_get_theme()->errors() !== false)
 {
 
-	$themes = array_filter(scandir(SRC_PATH . '/themes/'), function ($dir)
+	$themesFolders = array_filter(scandir(SRC_PATH . '/themes/'), function ($dir)
 	{
 		return substr($dir, 0, 1) != '.';
 	});
 
 
-	if (in_array(APP_THEME, $themes))
+	if (in_array(APP_THEME, $themesFolders))
 	{
 		update_option('template', APP_THEME);
 		update_option('stylesheet', APP_THEME);
