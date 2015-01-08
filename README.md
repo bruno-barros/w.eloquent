@@ -1,5 +1,7 @@
 ![w.eloquent](https://raw.githubusercontent.com/bruno-barros/w.eloquent-framework/master/weloquent.png)
 
+[![Build Status](https://travis-ci.org/bruno-barros/w.eloquent-framework.svg)](https://travis-ci.org/bruno-barros/w.eloquent-framework)
+
 Wordpress integrated with Laravel via Composer.
 
 #### Documentation is being building on [wiki page](https://github.com/bruno-barros/w.eloquent/wiki).
