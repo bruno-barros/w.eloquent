@@ -30,4 +30,27 @@ return [
 	 */
 	'pagination' => null,
 
+	/**
+	 * --------------------------------------------------------------------------
+	 *  Views filters/actions hooks
+	 * --------------------------------------------------------------------------
+	 *
+	 * The way Blade engine intercepts the templates requested by WordPress is
+	 * using filters. These are the core filters, but you can add more filters
+	 * made by plugins if you want to render as Blade views.
+	 * ATTENTION: if you remove these filters the Blade engine could not
+	 * do the job accordingly.
+	 *
+	 */
+
+	'view_actions' => [
+		'template_include',
+	],
+
+	'view_filters' => [
+		'index_template',
+		'comments_template',
+		'bp_template_include',// Listen for Buddypress include action
+	],
+
 ];
