@@ -121,6 +121,7 @@ return [
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
 		'Weloquent\Providers\AuthServiceProvider',
+		'Weloquent\Providers\GlobalJsServiceProvider',
 		'Weloquent\Providers\SessionServiceProvider',
 		'Weloquent\Providers\ViewServiceProvider',
 		'Weloquent\Providers\WelServiceProvider',
@@ -155,6 +156,7 @@ return [
 		'Event'             => 'Illuminate\Support\Facades\Event',
 		'File'              => 'Illuminate\Support\Facades\File',
 		'Form'              => 'Illuminate\Support\Facades\Form',
+		'GlobalJs'          => 'Weloquent\Facades\GlobalJs',
 		'Hash'              => 'Illuminate\Support\Facades\Hash',
 		'Hooks'             => 'Weloquent\Facades\Hooks',
 		'HTML'              => 'Illuminate\Support\Facades\HTML',
