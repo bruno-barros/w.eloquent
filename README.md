@@ -51,9 +51,9 @@ The packages are being adapted to WordPress environment.
 [ok] Migration <br>
 [ok] Seed <br>
 [ok] Auth <br>
+[ok] Log <br>
+[ok] Mail <br>
 
-[  ] Log <br>
-[  ] Mail <br>
 [  ] Queue <br>
 [  ] Redis <br>
 [  ] Remote <br>
