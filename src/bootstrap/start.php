@@ -23,19 +23,6 @@ if (file_exists($autoload = $root_path . DS . 'vendor' . DS . 'autoload.php'))
 	require_once($autoload);
 }
 
-/**
- * --------------------------------------------------------------------------
- *  Include The Compiled Class File
- * --------------------------------------------------------------------------
- *
- *  To dramatically increase your application's performance, you may use a
- *  compiled class file which contains all of the classes commonly used
- *  by a request. The Wel "optimize --force" is used to create this file.
- */
-if (file_exists($compiled = SRC_PATH. '/storage/compiled.php'))
-{
-	require $compiled;
-}
 
 /**
  * ----------------------------------------------------
@@ -94,6 +81,8 @@ else
 	printf('<h2>%s</h2>', 'Missing environment variables.');
 }
 
+
+
 /**
  * ----------------------------------------------------
  * Load environment config constants
@@ -112,4 +101,21 @@ if (file_exists($config = $root_path . DS . 'src' . DS . 'bootstrap' . DS . $loc
 if (file_exists($shared = $root_path . DS . 'src' . DS . 'bootstrap' . DS . 'shared.php'))
 {
 	require_once($shared);
+}
+
+
+/**
+ * --------------------------------------------------------------------------
+ *  Include The Compiled Class File
+ * --------------------------------------------------------------------------
+ *
+ *  To dramatically increase your application's performance, you may use a
+ *  compiled class file which contains all of the classes commonly used
+ *  by a request. The Wel "optimize --force" is used to create this file.
+ */
+$paths = require SRC_PATH.DS.'bootstrap'.DS.'paths.php';
+
+if (file_exists($compiled = $paths['storage']. '/compiled.php'))
+{
+	require $compiled;
 }
