@@ -4,6 +4,10 @@
  * Paths
  * ----------------------------------------------------
  */
+
+/** @var array $paths */
+$paths = require 'paths.php';
+
 /** @var string $contentDirectory The source folder of the theme */
 $contentDirectory = 'src';
 
@@ -20,6 +24,20 @@ $root_path = str_replace(DS . $contentDirectory, '', SRC_PATH);
 if (file_exists($autoload = $root_path . DS . 'vendor' . DS . 'autoload.php'))
 {
 	require_once($autoload);
+}
+
+/**
+ * --------------------------------------------------------------------------
+ *  Include The Compiled Class File
+ * --------------------------------------------------------------------------
+ *
+ *  To dramatically increase your application's performance, you may use a
+ *  compiled class file which contains all of the classes commonly used
+ *  by a request. The Wel "optimize --force" is used to create this file.
+ */
+if (file_exists($compiled = $paths['storage'] . '/compiled.php'))
+{
+	require $compiled;
 }
 
 /**
@@ -88,7 +106,6 @@ if (file_exists($config = $root_path . DS . 'src' . DS . 'bootstrap' . DS . $loc
 {
 	require_once($config);
 }
-
 
 /**
  * ----------------------------------------------------
