@@ -53,8 +53,8 @@ The packages are being adapted to WordPress environment.
 [ok] Auth <br>
 [ok] Log <br>
 [ok] Mail <br>
+[ok] Queue <br>
 
-[  ] Queue <br>
 [  ] Redis <br>
 [  ] Remote <br>
 [  ] Reminder <br>
