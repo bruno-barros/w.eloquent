@@ -5,9 +5,6 @@
  * ----------------------------------------------------
  */
 
-/** @var array $paths */
-$paths = require 'paths.php';
-
 /** @var string $contentDirectory The source folder of the theme */
 $contentDirectory = 'src';
 
@@ -35,7 +32,7 @@ if (file_exists($autoload = $root_path . DS . 'vendor' . DS . 'autoload.php'))
  *  compiled class file which contains all of the classes commonly used
  *  by a request. The Wel "optimize --force" is used to create this file.
  */
-if (file_exists($compiled = $paths['storage'] . '/compiled.php'))
+if (file_exists($compiled = SRC_PATH. '/storage/compiled.php'))
 {
 	require $compiled;
 }
