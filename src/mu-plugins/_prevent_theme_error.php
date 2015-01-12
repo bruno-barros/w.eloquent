@@ -8,6 +8,10 @@
  *
  *  It is just to prevent errors when installing and setting up.
  */
+if(defined('WP_INSTALLING') && WP_INSTALLING)
+{
+	return;
+}
 
 if (wp_get_theme()->get_template() !== APP_THEME || wp_get_theme()->errors() !== false)
 {
