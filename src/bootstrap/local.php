@@ -56,7 +56,8 @@ define('SAVEQUERIES', true);
  *
  *  By default are migrations and seeders
  */
-
+if(! defined('WP_ADMIN'))
+{
 $autoLoadDirectories = [
 	SRC_PATH . '/themes/' . getenv('APP_THEME') . '/app/database/migrations',
 	SRC_PATH . '/themes/' . getenv('APP_THEME') . '/app/database/seeds',
@@ -74,5 +75,6 @@ foreach($autoLoadDirectories as $atdir)
 			}
 		}
 	}
+}
 }
 
