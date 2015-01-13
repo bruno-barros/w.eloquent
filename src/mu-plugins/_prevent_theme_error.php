@@ -8,6 +8,7 @@
  *
  *  It is just to prevent errors when installing and setting up.
  */
+
 if(defined('WP_INSTALLING') && WP_INSTALLING)
 {
 	return;

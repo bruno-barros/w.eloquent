@@ -47,8 +47,6 @@ define('WP_DEBUG_LOG', true);
  */
 define('SAVEQUERIES', true);
 
-
-
 /**
  * --------------------------------------------------------------------------
  *  Auto load some files
@@ -56,25 +54,25 @@ define('SAVEQUERIES', true);
  *
  *  By default are migrations and seeders
  */
-if(! defined('WP_ADMIN'))
+if (!defined('WP_ADMIN') || !WP_ADMIN)
 {
-$autoLoadDirectories = [
-	SRC_PATH . '/themes/' . getenv('APP_THEME') . '/app/database/migrations',
-	SRC_PATH . '/themes/' . getenv('APP_THEME') . '/app/database/seeds',
-];
+	$autoLoadDirectories = [
+		SRC_PATH . '/themes/' . getenv('APP_THEME') . '/app/database/migrations',
+		SRC_PATH . '/themes/' . getenv('APP_THEME') . '/app/database/seeds',
+	];
 
-foreach($autoLoadDirectories as $atdir)
-{
-	foreach (new \DirectoryIterator($atdir) as $file)
+	foreach ($autoLoadDirectories as $atdir)
 	{
-		if (!$file->isDot() || !$file->isDir())
+		foreach (new \DirectoryIterator($atdir) as $file)
 		{
-			if (pathinfo($file->getFilename(), PATHINFO_EXTENSION) === 'php')
+			if (!$file->isDot() || !$file->isDir())
 			{
-				include_once $file->getPath() . DS . $file->getBasename();
+				if (pathinfo($file->getFilename(), PATHINFO_EXTENSION) === 'php')
+				{
+					include_once $file->getPath() . DS . $file->getBasename();
+				}
 			}
 		}
 	}
-}
 }
 
