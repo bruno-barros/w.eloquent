@@ -21,6 +21,11 @@ The w.eloquent project comes with a very simple theme (base).
 
 To see the very features you have at your disposal, check out the [w.eloquent starter theme](https://github.com/bruno-barros/weloquent-starter-theme)
 
+### Complementary packages
+
+[**w.eloquent Command Bus**](https://github.com/bruno-barros/w.eloquent-bus)
+
+
 ### Inspirations
 These are projects I like and did inspire me to put it all together:
 
