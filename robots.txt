@@ -1,0 +1,10 @@
+User-agent: *
+
+Disallow: /cms/
+Disallow: /vendor/
+Disallow: /src/storage/
+Disallow: /src/plugins/
+Disallow: /src/mu-plugins/
+
+# http://www.check-domains.com/sitemap/index.php #
+# sitemap: http://www.yousite.com/sitemap.xml
