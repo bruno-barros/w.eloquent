@@ -65,7 +65,7 @@ if (!defined('WP_ADMIN') || !WP_ADMIN)
 	{
 		foreach (new \DirectoryIterator($atdir) as $file)
 		{
-			if (!$file->isDot() || !$file->isDir())
+			if ($file->isFile() && (!$file->isDot() || !$file->isDir()))
 			{
 				if (pathinfo($file->getFilename(), PATHINFO_EXTENSION) === 'php')
 				{
