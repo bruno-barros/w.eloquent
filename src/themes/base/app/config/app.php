@@ -120,6 +120,7 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		'Weloquent\Providers\AjaxServiceProvider',
 		'Weloquent\Providers\AuthServiceProvider',
 		'Weloquent\Providers\GlobalJsServiceProvider',
 		'Weloquent\Providers\SessionServiceProvider',
@@ -141,6 +142,7 @@ return [
 
 	'aliases'         => [
 
+		'Ajax'              => 'Weloquent\Facades\Ajax',
 		'App'               => 'Illuminate\Support\Facades\App',
 		'Artisan'           => 'Illuminate\Support\Facades\Artisan',
 		'Assets'            => 'Weloquent\Facades\Assets',
