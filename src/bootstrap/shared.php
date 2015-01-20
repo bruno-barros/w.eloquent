@@ -1,6 +1,17 @@
 <?php
 
 /**
+ * --------------------------------------------
+ * Define if you want the w.eloquent running
+ * inside admin environment
+ * --------------------------------------------
+ *
+ * Just auto loaded files will be loaded
+ */
+define('WELOQUENT_PREVENT_LOAD_ON_ADMIN', false);
+
+
+/**
  * ----------------------------------------------------
  * Paths to WordPress
  * ----------------------------------------------------
