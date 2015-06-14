@@ -32,11 +32,11 @@
   "require": {
     "php": ">=5.4",
     "johnpbloch/wordpress": "4.1.*",
-    "bruno-barros/w.eloquent-framework": "1.1.*"
+    "bruno-barros/w.eloquent-framework": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "4.2.*",
-    "mockery/mockery": "dev-master",
+    "mockery/mockery": "*",
     "10up/wp_mock": "dev-master"
   },
   "extra": {
