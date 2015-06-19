@@ -32,7 +32,11 @@
   "require": {
     "php": ">=5.4",
     "johnpbloch/wordpress": "4.1.*",
-    "bruno-barros/w.eloquent-framework": "dev-master"
+    "bruno-barros/w.eloquent-framework": "dev-master",
+	"brain/amygdala": "dev-master",
+	"brain/striatum": "dev-master",
+	"brain/occipital": "dev-master",
+	"brain/cortex": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "4.2.*",
