@@ -1,24 +1,45 @@
 {
-	"name": "w.eloquent",
-	"version": "0.0.0",
-	"description": "",
-	"main": "gulpfile.js",
-	"dependencies": {
-		"gulp": "~3.8.8"
-	},
-	"devDependencies": {
-		"gulp-rename": "~1.2.0",
-		"gulp-concat": "~2.4.1",
-		"gulp-uglify": "~1.0.1",
-		"gulp-jshint": "~1.8.4",
-		"gulp-minify-css": "^0.3.10",
-		"gulp-autoprefixer": "^1.0.1",
-		"gulp-strip-debug": "^1.0.1",
-		"gulp-filesize": "0.0.6"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"author": "",
-	"license": "BSD-2-Clause"
+  "name": "w.eloquent",
+  "localUrl": "http://localhost/wordpress",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+
+  "browserify": {
+	"transform": [
+	  "browserify-shim"
+	]
+  },
+
+  "browserify-shim": {
+	"jquery": "$"
+  },
+
+  "dependencies": {
+	"gulp": "~3.8.8"
+  },
+
+  "devDependencies": {
+	"gulp-rename": "~1.2.0",
+	"gulp-concat": "~2.4.1",
+	"gulp-uglify": "~1.0.1",
+	"gulp-jshint": "~1.8.4",
+	"gulp-minify-css": "^0.3.10",
+	"gulp-autoprefixer": "^1.0.1",
+	"gulp-strip-debug": "^1.0.1",
+	"browser-sync": "~2.2.2",
+	"browserify-shim": "^3.8.9",
+	"gulp-notify": "^2.2.0",
+	"browserify": "latest",
+	"watchify": "latest",
+	"vinyl-source-stream": "latest",
+	"vinyl-buffer": "latest",
+	"yargs": "latest"
+  },
+
+  "scripts": {
+	"test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
 }
