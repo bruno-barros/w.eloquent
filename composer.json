@@ -31,7 +31,7 @@
   },
   "require": {
     "php": ">=5.4",
-    "johnpbloch/wordpress": "4.1.*",
+    "johnpbloch/wordpress": "4.2.*",
     "bruno-barros/w.eloquent-framework": "dev-master",
 	"brain/amygdala": "dev-master",
 	"brain/striatum": "dev-master",

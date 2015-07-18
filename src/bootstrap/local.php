@@ -15,8 +15,10 @@ define('DB_HOST', getenv('DB_HOST') ? getenv('DB_HOST') : 'localhost');
 define('WP_HOME', getenv('WP_HOME'));
 define('WP_SITEURL', getenv('WP_SITEURL'));
 
+$isPluginsPage = str_contains($_SERVER['PHP_SELF'], 'plugins.php');
+
 // Development
-define('WP_DEBUG', true);
+define('WP_DEBUG', $isPluginsPage ? false : true);
 
 // Cache system
 define('WP_CACHE', true);
