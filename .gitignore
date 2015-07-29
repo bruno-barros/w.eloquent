@@ -42,3 +42,4 @@ _global.min.js
 
 ### Environment Credentials
 /.env*php
+!/.env.example.php
