@@ -35,10 +35,8 @@ composer.lock
 /src/storage/views/*
 
 # Compiled Assets
-_global.css
-_global.min.css
-_global.js
-_global.min.js
+_*.css
+_*.js
 
 ### Environment Credentials
 /.env*php
