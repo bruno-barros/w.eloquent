@@ -77,3 +77,17 @@ define('WP_AUTO_UPDATE_CORE', 'minor');
 define('DISALLOW_FILE_EDIT', true);
 define('WP_POST_REVISIONS', 3);
 define('AUTOSAVE_INTERVAL', 60); // Seconds
+
+/**
+ * enabling "trash" for media items
+ * @link https://codex.wordpress.org/Version_4.1#Media_2
+ */
+define('MEDIA_TRASH', true);
+
+/**
+ * @link https://codex.wordpress.org/Trash_status
+ * Note: If this constant is set to 0, the trash functionality will be disabled and the 'Delete Permanently'
+ * button will appear instead of 'Trash' button. If you click 'Delete Permanently' button, the item will
+ * immediately deleted without any alert message.
+ */
+define('EMPTY_TRASH_DAYS', 30); // 30 days
