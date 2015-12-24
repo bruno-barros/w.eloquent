@@ -42,7 +42,7 @@
     "phpunit/phpunit": "4.2.*",
     "mockery/mockery": "*",
     "10up/wp_mock": "dev-master",
-	"laracasts/integrated" : "dev-master"
+	"laracasts/integrated" : "0.15.6"
   },
   "extra": {
     "installer-paths": {
