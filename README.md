@@ -60,13 +60,13 @@ The packages are being adapted to WordPress environment.
  - [x] Mail
  - [x] Queue
 
----
+<br>
 
  - [ ] Redis
  - [ ] Remote
  - [ ] Reminder
 
----
+<br>
 
  - Workbench <sup>(not planned)</sup>
  - Pagination <sup>(provided by WordPress)</sup>
