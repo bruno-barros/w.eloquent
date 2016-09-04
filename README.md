@@ -4,6 +4,8 @@
 
 Wordpress integrated with Laravel via Composer.
 
+* Atention! The branch `master` is no longer manteined. Now I'm working on branch `light`. Not booting Laravel anymore, instead just using some packages. It all is because performance reason.
+
 #### Documentation is being building on [wiki page](https://github.com/bruno-barros/w.eloquent/wiki).
 
 ### Goals
