@@ -37,32 +37,36 @@ These are projects I like and did inspire me to put it all together:
 ### Status
 The packages are being adapted to WordPress environment.
 
-[ok] Views <br>
-[ok] Blade template engine <br>
-[ok] Routes by Cortex <br>
-[ok] Assets by Occiptial <br>
-[ok] Hooks by Striatum <br>
-[ok] Validation <br>
-[ok] CLI (php wel) <br>
-[ok] Cache <br>
-[ok] Hash <br>
-[ok] Filesystem <br>
-[ok] Html <br>
-[ok] Translation <br>
-[ok] Encryption <br>
-[ok] Cookie <br>
-[ok] Session <br>
-[ok] Database <br>
-[ok] Migration <br>
-[ok] Seed <br>
-[ok] Auth <br>
-[ok] Log <br>
-[ok] Mail <br>
-[ok] Queue <br>
+ - [x] Views
+ - [x] Blade template engine
+ - [x] Routes by Cortex
+ - [x] Assets by Occiptial
+ - [x] Hooks by Striatum
+ - [x] Validation
+ - [x] CLI (php wel)
+ - [x] Cache
+ - [x] Hash
+ - [x] Filesystem
+ - [x] Html
+ - [x] Translation
+ - [x] Encryption
+ - [x] Cookie
+ - [x] Session
+ - [x] Database
+ - [x] Migration
+ - [x] Seed
+ - [x] Auth
+ - [x] Log
+ - [x] Mail
+ - [x] Queue
 
-[  ] Redis <br>
-[  ] Remote <br>
-[  ] Reminder <br>
+<br>
 
-[--] Workbench (not planned) <br>
-[--] Pagination (provided by WordPress) <br>
+ - [ ] Redis
+ - [ ] Remote
+ - [ ] Reminder
+
+<br>
+
+ - Workbench <sup>(not planned)</sup>
+ - Pagination <sup>(provided by WordPress)</sup>
